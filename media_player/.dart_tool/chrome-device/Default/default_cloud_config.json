@@ -86,7 +86,7 @@
       "effectStrategy": "launch",
       "instanceId": "bzatjpaqglyyxiaqtufvrwcynulkjazt",
       "type": "normal",
-      "version": "1001"
+      "version": "1003"
    }, {
       "appId": "e54758ece3475afa1b2a65wsefd0db36",
       "appName": "ads_block",
@@ -338,5 +338,5 @@
       "type": "builtin",
       "version": "1003"
    } ],
-   "version": "202412160001"
+   "version": "202412180002"
 }

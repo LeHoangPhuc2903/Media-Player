@@ -37,6 +37,7 @@ dependencies:
   get: ^4.6.5
   font_awesome_flutter: ^10.0.0
   carousel_slider: ^5.0.0
+  just_audio: ^0.9.42
 dev_dependencies:
   flutter_test:
     sdk: flutter
