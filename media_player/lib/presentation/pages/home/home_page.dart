@@ -14,29 +14,30 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    final banners = [
-      {
-        'image': 'assets/images/banner_1.jpg',
-        'title': 'New Music',
-        'subtitle': 'FRIDAY',
-      },
-      {
-        'image': 'assets/images/banner_2.jpg',
-        'title': 'Top Hits',
-        'subtitle': 'TRENDING',
-      },
-      {
-        'image': 'assets/images/banner_3.jpg',
-        'title': 'Chill Vibes',
-        'subtitle': 'RELAX',
-      },
-    ];
+   final banners = [
+  {
+    'image': 'lib/data/assets/images/adventure.webp',
+    'title': 'Adventure Awaits',
+    'subtitle': 'EXPLORE',
+  },
+  {
+    'image': 'lib/data/assets/images/dream.webp',
+    'title': 'Dreams of Tomorrow',
+    'subtitle': 'IMAGINE',
+  },
+  {
+    'image': 'lib/data/assets/images/chill.webp',
+    'title': 'Chill Vibes',
+    'subtitle': 'RELAX',
+  },
+];
     
-    final playlists = [
-      {'image': 'assets/images/playlist_1.jpg', 'title': 'Playlist 1'},
-      {'image': 'assets/images/playlist_2.jpg', 'title': 'Playlist 2'},
-      {'image': 'assets/images/playlist_3.jpg', 'title': 'Playlist 3'},
-    ];
+   final playlists = [
+  {'image': 'lib/data/assets/images/echo.webp', 'title': 'Echoes of the Night'},
+  {'image': 'lib/data/assets/images/party.webp', 'title': 'Party All Night'},
+  {'image': 'lib/data/assets/images/chill.webp', 'title': 'Chill Time'}, 
+];
+
 
     return Scaffold(
       appBar: const AppBarTile(),
@@ -45,20 +46,19 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             BannerWidget(banners: banners), // Truyền danh sách banner
-            SectionTitleWidget(
-              title: 'Âm nhạc thịnh hành',
-              onSeeAllPressed: () {
-                print('Xem tất cả thịnh hành');
-                Get.toNamed(Routes.playlist);
-              },
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SectionTitleWidget(title: 'Featured Playlists'),
             ),
             HorizontalPlaylistWidget(playlists: playlists),
-            SectionTitleWidget(
-              title: 'Gợi ý cho bạn',
-              onSeeAllPressed: () {
-                print('Xem tất cả gợi ý');
-                Get.toNamed(Routes.playlist);
-              },
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SectionTitleWidget(title: 'Recently Played'),
+            ),
+            HorizontalPlaylistWidget(playlists: playlists),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SectionTitleWidget(title: 'Top Charts'),
             ),
             HorizontalPlaylistWidget(playlists: playlists),
           ],

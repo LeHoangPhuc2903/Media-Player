@@ -1,99 +1,78 @@
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
-import 'package:media_player/presentation/widgets/player/media_image_widget.dart';
-import 'package:media_player/presentation/widgets/player/media_info_widget.dart';
-import 'package:media_player/presentation/widgets/player/playback_controls_widget.dart';
-import 'package:media_player/presentation/widgets/player/progress_bar_widget.dart';
 
+class PlayerPage extends StatelessWidget {
+  final Map<String, String> songData;
 
-class PlayerPage extends StatefulWidget {
-  const PlayerPage({Key? key}) : super(key: key);
-
-  @override
-  _PlayerPageState createState() => _PlayerPageState();
-}
-
-class _PlayerPageState extends State<PlayerPage> {
-  final AudioPlayer _audioPlayer = AudioPlayer();
-  bool _isPlaying = false;
-  Duration _currentPosition = Duration.zero;
-  Duration _totalDuration = Duration.zero;
-
-  @override
-  void initState() {
-    super.initState();
-    _initAudioPlayer();
-  }
-
-  void _initAudioPlayer() {
-    _audioPlayer.playerStateStream.listen((state) {
-      setState(() {
-        _isPlaying = state.playing;
-      });
-    });
-
-    _audioPlayer.positionStream.listen((position) {
-      setState(() {
-        _currentPosition = position;
-      });
-    });
-
-    _audioPlayer.durationStream.listen((duration) {
-      setState(() {
-        _totalDuration = duration ?? Duration.zero;
-      });
-    });
-  }
-
-  @override
-  void dispose() {
-    _audioPlayer.dispose();
-    super.dispose();
-  }
+  PlayerPage({required this.songData});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Now Playing")),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const MediaImageWidget(
-              imageUrl: "https://via.placeholder.com/200",
-            ),
-            const SizedBox(height: 20),
-            const MediaInfoWidget(
-              title: "Song Title",
-              artist: "Artist Name",
-            ),
-            const SizedBox(height: 20),
-            ProgressBarWidget(
-              currentPosition: _currentPosition,
-              totalDuration: _totalDuration,
-              onSeek: (value) {
-                _audioPlayer.seek(Duration(seconds: value.toInt()));
-              },
-            ),
-            const SizedBox(height: 20),
-            PlaybackControlsWidget(
-              isPlaying: _isPlaying,
-              onPlay: () {
-                _audioPlayer.play();
-              },
-              onPause: () {
-                _audioPlayer.pause();
-              },
-              onNext: () {
-                print("Next song");
-              },
-              onPrevious: () {
-                print("Previous song");
-              },
-            ),
-          ],
-        ),
+      appBar: AppBar(
+        title: Text('Đang phát: ${songData['playlistTitle']}'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // Hiển thị hình playlist hoặc bài hát
+          Image.asset(
+            songData['playlistImage']!,
+            width: 200,
+            height: 200,
+            fit: BoxFit.cover,
+          ),
+          SizedBox(height: 16),
+          // Hiển thị tên bài hát
+          Text(
+            songData['title']!,
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          // Hiển thị nghệ sĩ hoặc thông tin bổ sung
+          Text(
+            songData['subtitle']!,
+            style: TextStyle(fontSize: 18, color: Colors.grey),
+          ),
+          SizedBox(height: 16),
+          // Thanh tiến trình phát nhạc (giả lập)
+          Slider(
+            value: 0.5,
+            onChanged: (value) {
+              // Xử lý khi kéo thanh tiến trình
+            },
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('1:33'),
+              Text('3:40'),
+            ],
+          ),
+          SizedBox(height: 16),
+          // Các nút điều khiển phát nhạc
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                icon: Icon(Icons.skip_previous, size: 36),
+                onPressed: () {
+                  // Xử lý quay lại bài hát trước
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.play_arrow, size: 36),
+                onPressed: () {
+                  // Xử lý phát nhạc
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.skip_next, size: 36),
+                onPressed: () {
+                  // Xử lý chuyển bài hát
+                },
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

@@ -1,41 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
 
 class HorizontalPlaylistWidget extends StatelessWidget {
   final List<Map<String, String>> playlists;
 
-  const HorizontalPlaylistWidget({Key? key, required this.playlists})
-      : super(key: key);
+  const HorizontalPlaylistWidget({Key? key, required this.playlists}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150,
+    return Container(
+      height: 200,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         itemCount: playlists.length,
         itemBuilder: (context, index) {
           final playlist = playlists[index];
-          return Padding(
-            padding: const EdgeInsets.only(right: 16.0),
-            child: Column(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    playlist['image']!,
-                    width: 100,
-                    height: 100,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  playlist['title']!,
-                  style: const TextStyle(fontSize: 14),
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
+          return GestureDetector(
+            onTap: () {
+              Get.to(() => PlaylistPage(
+                title: playlist['title']!,
+                image: playlist['image']!,
+              ));
+            },
+            child: Container(
+              width: 150,
+              margin: EdgeInsets.all(8.0),
+              
+              child: Column(
+                children: [
+                  Image.asset(playlist['image']!),
+                  Text(playlist['title']!),
+                ],
+              ),
             ),
           );
         },

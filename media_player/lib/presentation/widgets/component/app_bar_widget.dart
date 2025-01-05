@@ -6,7 +6,7 @@ class AppBarTile extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text(
+      title:  Text(
         'Trang chủ',
         style: TextStyle(color: Colors.black),
       ),
