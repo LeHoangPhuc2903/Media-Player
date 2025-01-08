@@ -8,6 +8,8 @@ import 'package:media_player/presentation/pages/home/home_page.dart';
 import 'package:media_player/presentation/pages/onboarding/onboarding_page.dart';
 import 'package:media_player/presentation/pages/player/player_page.dart';
 import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
+import 'package:media_player/presentation/pages/profile_page.dart';
+import 'package:media_player/presentation/pages/search_page.dart';
 import 'package:media_player/presentation/pages/splash/splash_page.dart';
 
 
@@ -44,7 +46,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: Routes.home, page: () => HomePage()),
         GetPage(name: Routes.playlist, page: () => PlaylistPage(title: '', image: '',)),
         GetPage(name: Routes.player, page: () => PlayerPage(songData: {},)),
-
+        GetPage(name: Routes.search, page: () => SearchPage()),
+        GetPage(name: Routes.profile, page: () => ProfilePage()),
         GetPage(name: '/banner_detail', page: () => BannerDetailPage(title: '', imageUrl: '')),
       ],
     );

@@ -3,12 +3,12 @@ import 'package:media_player/core/utils/constants.dart';
 
 class AppLogo extends StatelessWidget {
   final double size;
-  final Color color; // Thêm tham số color
+  final Color color;
 
   const AppLogo({
     Key? key,
     this.size = 80.0, // Kích thước mặc định
-    this.color = Colors.purple, // Màu mặc định
+    this.color = AppColors.primaryColor, // Màu mặc định
   }) : super(key: key);
 
   @override

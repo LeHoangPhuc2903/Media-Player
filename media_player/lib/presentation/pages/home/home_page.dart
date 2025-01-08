@@ -6,46 +6,26 @@ import 'package:media_player/presentation/widgets/component/banner_widget.dart';
 import 'package:media_player/presentation/widgets/component/bottom_nav_widget.dart';
 import 'package:media_player/presentation/widgets/playlist/horizontal_playlist_widget.dart';
 import 'package:media_player/presentation/widgets/component/section_tile_widget.dart';
+import 'package:media_player/data/mock_data.dart';
 
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
+  static const PageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    
-   final banners = [
-  {
-    'image': 'lib/data/assets/images/adventure.webp',
-    'title': 'Adventure Awaits',
-    'subtitle': 'EXPLORE',
-  },
-  {
-    'image': 'lib/data/assets/images/dream.webp',
-    'title': 'Dreams of Tomorrow',
-    'subtitle': 'IMAGINE',
-  },
-  {
-    'image': 'lib/data/assets/images/chill.webp',
-    'title': 'Chill Vibes',
-    'subtitle': 'RELAX',
-  },
-];
-    
-   final playlists = [
-  {'image': 'lib/data/assets/images/echo.webp', 'title': 'Echoes of the Night'},
-  {'image': 'lib/data/assets/images/party.webp', 'title': 'Party All Night'},
-  {'image': 'lib/data/assets/images/chill.webp', 'title': 'Chill Time'}, 
-];
-
 
     return Scaffold(
-      appBar: const AppBarTile(),
+      appBar: AppBar(
+        title: const Text('Trang chủ'),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            BannerWidget(banners: banners), // Truyền danh sách banner
+            BannerWidget(banners: banners),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SectionTitleWidget(title: 'Featured Playlists'),
@@ -65,9 +45,19 @@ class HomePage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationWidget(
-        currentIndex: 0,
+        currentIndex: PageIndex,
         onTabSelected: (index) {
-          print('Selected Tab: $index');
+           print('Tab selected: $index');                
+          switch (index) {
+          case 0:         
+            break;          
+          case 1: 
+            Get.offAllNamed(Routes.search);
+            break;
+          case 2:
+            Get.offAllNamed(Routes.profile);
+            break;
+          }
           
         },
       ),

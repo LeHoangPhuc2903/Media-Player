@@ -25,7 +25,7 @@ class AppStyles {
 
 class AppColors {
   // Màu sắc
-  static const Color primaryColor = Colors.purple;
+  static const Color primaryColor = Colors.blue;
   static const Color termsTextColor = Colors.grey;
   static const Color linkColor = Colors.blue;
 

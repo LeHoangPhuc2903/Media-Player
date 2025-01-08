@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:media_player/presentation/pages/player/player_page.dart';
+import 'package:media_player/data/mock_data.dart';
 
 class PlaylistPage extends StatelessWidget {
   final String title;
@@ -9,29 +10,7 @@ class PlaylistPage extends StatelessWidget {
   PlaylistPage({required this.title, required this.image});
 
   @override
-  Widget build(BuildContext context) {
-    final List<Map<String, String>> songs = [
-      {'title': 'Song 1', 'subtitle': 'Artist 1', 'path': 'lib/data/assets/song1.mp3'},
-      {'title': 'Song 2', 'subtitle': 'Artist 2', 'path': 'lib/data/assets/song2.mp3'},
-      {'title': 'Song 3', 'subtitle': 'Artist 3', 'path': 'lib/data/assets/song3.mp3'},
-      {'title': 'Song 4', 'subtitle': 'Artist 4', 'path': 'lib/data/assets/song2.mp3'},
-      {'title': 'Song 1', 'subtitle': 'Artist 1', 'path': 'lib/data/assets/song1.mp3'},
-      {'title': 'Song 2', 'subtitle': 'Artist 2', 'path': 'lib/data/assets/song2.mp3'},
-      {'title': 'Song 3', 'subtitle': 'Artist 3', 'path': 'lib/data/assets/song3.mp3'},
-      {'title': 'Song 4', 'subtitle': 'Artist 4', 'path': 'lib/data/assets/song2.mp3'},
-      {'title': 'Song 1', 'subtitle': 'Artist 1', 'path': 'lib/data/assets/song1.mp3'},
-      {'title': 'Song 2', 'subtitle': 'Artist 2', 'path': 'lib/data/assets/song1.mp3'},
-      {'title': 'Song 3', 'subtitle': 'Artist 3', 'path': 'lib/data/assets/song2.mp3'},
-      {'title': 'Song 4', 'subtitle': 'Artist 4', 'path': 'lib/data/assets/song1.mp3'},
-      {'title': 'Song 1', 'subtitle': 'Artist 1', 'path': 'lib/data/assets/song2.mp3'},
-      {'title': 'Song 2', 'subtitle': 'Artist 2', 'path': 'lib/data/assets/song3.mp3'},
-      {'title': 'Song 3', 'subtitle': 'Artist 3', 'path': 'lib/data/assets/song1.mp3'},
-      {'title': 'Song 4', 'subtitle': 'Artist 4', 'path': 'lib/data/assets/song3.mp3'},
-      {'title': 'Song 1', 'subtitle': 'Artist 1', 'path': 'lib/data/assets/song2.mp3'},
-      {'title': 'Song 2', 'subtitle': 'Artist 2', 'path': 'lib/data/assets/song1.mp3'},
-      {'title': 'Song 3', 'subtitle': 'Artist 3', 'path': 'lib/data/assets/song3.mp3'},
-      
-    ];
+  Widget build(BuildContext context) {   
 
     return Scaffold(
       body: CustomScrollView(

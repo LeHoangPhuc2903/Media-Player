@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppBarTile extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarTile({Key? key}) : super(key: key);
+  const AppBarTile({super.key});
 
   @override
   Widget build(BuildContext context) {
