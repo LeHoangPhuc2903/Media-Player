@@ -10,7 +10,7 @@ import 'package:media_player/data/mock_data.dart';
 
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
   static const PageIndex = 0;
 
   @override

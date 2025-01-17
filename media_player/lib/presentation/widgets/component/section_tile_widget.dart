@@ -5,10 +5,10 @@ class SectionTitleWidget extends StatelessWidget {
   final VoidCallback? onSeeAllPressed;
 
   const SectionTitleWidget({
-    Key? key,
+    super.key,
     required this.title,
     this.onSeeAllPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

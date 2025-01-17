@@ -6,11 +6,11 @@ class ProgressBarWidget extends StatelessWidget {
   final ValueChanged<double> onSeek;
 
   const ProgressBarWidget({
-    Key? key,
+    super.key,
     required this.currentPosition,
     required this.totalDuration,
     required this.onSeek,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

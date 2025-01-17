@@ -122,6 +122,12 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "flutter_web_auth",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_web_auth-0.4.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_web_plugins",
       "rootUri": "file:///E:/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
@@ -404,7 +410,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-01-05T08:06:00.074049Z",
+  "generated": "2025-01-17T03:26:14.710346Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///E:/flutter",

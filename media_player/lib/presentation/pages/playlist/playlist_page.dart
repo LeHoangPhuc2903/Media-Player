@@ -1,100 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:media_player/presentation/pages/player/player_page.dart';
-import 'package:media_player/data/mock_data.dart';
+import 'package:media_player/presentation/view_models/playlist_view_model.dart';
 
 class PlaylistPage extends StatelessWidget {
-  final String title;
-  final String image;
+  final PlaylistViewModel viewModel;
 
-  PlaylistPage({required this.title, required this.image});
+  PlaylistPage(this.viewModel, {required String title, required String image});
 
   @override
-  Widget build(BuildContext context) {   
-
+  Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            expandedHeight: 250,
-            pinned: true,
-            backgroundColor: Colors.blue,
-            flexibleSpace: FlexibleSpaceBar(
-              title: Text(
-                title,
-                style: const TextStyle(color: Colors.white),
-              ),
-              background: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Image.asset(
-                    image,
-                    fit: BoxFit.cover,
-                  ),
-        
-                  Container(
-                  color: Colors.black.withOpacity(0.3),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                final song = songs[index];
-                return ListTile(
-                  leading: Icon(Icons.music_note),
-                  title: Text(song['title']!),
-                  subtitle: Text(song['subtitle']!),
-                  onTap: () {
-                    final songData = {
-                      'title': song['title']!,
-                      'subtitle': song['subtitle']!,
-                      'path': song['path']!,
-                      'playlistTitle': title,
-                      'playlistImage': image,
-                    };
-                    Get.to(() => PlayerPage(songData: songData));
-                  },
-                );
+      appBar: AppBar(title: Text('Playlists')),
+      body: Obx(() {
+        if (viewModel.playlists.isEmpty) {
+          return Center(child: Text('No playlists found.'));
+        }
+        return ListView.builder(
+          itemCount: viewModel.playlists.length,
+          itemBuilder: (context, index) {
+            final playlist = viewModel.playlists[index];
+            return ListTile(
+              title: Text(playlist.name),
+              onTap: () {
+                // Navigate to track list
               },
-              childCount: songs.length,
-            ),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 60,
-          color: Colors.blue,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Row(
-                  children: [
-                    Icon(Icons.play_arrow, color: Colors.white),
-                    SizedBox(width: 8),
-                    Text(
-                      'Now Playing: $title',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ],
-                ),
-              ),
-              IconButton(
-                icon: Icon(Icons.arrow_upward, color: Colors.white),
-                onPressed: () {
-                  // Xử lý mở trang PlayerPage
-                  Get.to(() => PlayerPage(songData: {},));
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
+            );
+          },
+        );
+      }),
     );
   }
 }

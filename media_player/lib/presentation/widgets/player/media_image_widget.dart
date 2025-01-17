@@ -4,9 +4,9 @@ class MediaImageWidget extends StatelessWidget {
   final String imageUrl;
 
   const MediaImageWidget({
-    Key? key,
+    super.key,
     required this.imageUrl,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

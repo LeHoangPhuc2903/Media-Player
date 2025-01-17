@@ -1,78 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:media_player/domain/entities/track.dart';
 
 class PlayerPage extends StatelessWidget {
-  final Map<String, String> songData;
+  final Track? track; // Cho phép null
 
-  PlayerPage({required this.songData});
+  PlayerPage({this.track});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Đang phát: ${songData['playlistTitle']}'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          // Hiển thị hình playlist hoặc bài hát
-          Image.asset(
-            songData['playlistImage']!,
-            width: 200,
-            height: 200,
-            fit: BoxFit.cover,
-          ),
-          SizedBox(height: 16),
-          // Hiển thị tên bài hát
-          Text(
-            songData['title']!,
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          // Hiển thị nghệ sĩ hoặc thông tin bổ sung
-          Text(
-            songData['subtitle']!,
-            style: TextStyle(fontSize: 18, color: Colors.grey),
-          ),
-          SizedBox(height: 16),
-          // Thanh tiến trình phát nhạc (giả lập)
-          Slider(
-            value: 0.5,
-            onChanged: (value) {
-              // Xử lý khi kéo thanh tiến trình
-            },
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('1:33'),
-              Text('3:40'),
-            ],
-          ),
-          SizedBox(height: 16),
-          // Các nút điều khiển phát nhạc
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                icon: Icon(Icons.skip_previous, size: 36),
-                onPressed: () {
-                  // Xử lý quay lại bài hát trước
-                },
+      appBar: AppBar(title: Text(track?.title ?? 'No Song Found')),
+      body: Center(
+        child: track == null
+            ? Text(
+                'No song data available',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              )
+            : Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Now Playing: ${track!.title}'),
+                  Text('Artist: ${track!.subtitle}'),
+                ],
               ),
-              IconButton(
-                icon: Icon(Icons.play_arrow, size: 36),
-                onPressed: () {
-                  // Xử lý phát nhạc
-                },
-              ),
-              IconButton(
-                icon: Icon(Icons.skip_next, size: 36),
-                onPressed: () {
-                  // Xử lý chuyển bài hát
-                },
-              ),
-            ],
-          ),
-        ],
       ),
     );
   }

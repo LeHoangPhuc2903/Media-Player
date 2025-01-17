@@ -7,12 +7,12 @@ class CustomText extends StatelessWidget {
   final FontWeight fontWeight;
 
   const CustomText({
-    Key? key,
+    super.key,
     required this.text,
     this.fontSize = 14.0,          // Kích thước mặc định
     this.color = Colors.black,     // Màu mặc định
     this.fontWeight = FontWeight.normal, // Độ đậm font mặc định
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

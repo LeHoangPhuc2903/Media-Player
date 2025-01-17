@@ -8,13 +8,13 @@ class PlaybackControlsWidget extends StatelessWidget {
   final bool isPlaying;
 
   const PlaybackControlsWidget({
-    Key? key,
+    super.key,
     required this.onPlay,
     required this.onPause,
     required this.onNext,
     required this.onPrevious,
     required this.isPlaying,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

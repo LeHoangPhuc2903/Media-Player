@@ -6,10 +6,10 @@ class AppLogo extends StatelessWidget {
   final Color color;
 
   const AppLogo({
-    Key? key,
+    super.key,
     this.size = 80.0, // Kích thước mặc định
     this.color = AppColors.primaryColor, // Màu mặc định
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

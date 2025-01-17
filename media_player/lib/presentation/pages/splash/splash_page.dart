@@ -6,7 +6,7 @@ import 'package:media_player/presentation/pages/onboarding/onboarding_page.dart'
 import 'package:media_player/presentation/widgets/text/custom_text.dart';
 
 class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+  const SplashPage({super.key});
 
   @override
   State<SplashPage> createState() => _SplashPageState();

@@ -6,11 +6,11 @@ class PlaylistPage extends StatelessWidget {
   final List<Map<String, String>> songs; // Danh sách bài hát
 
   const PlaylistPage({
-    Key? key,
+    super.key,
     required this.backgroundImage,
     required this.title,
     required this.songs,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

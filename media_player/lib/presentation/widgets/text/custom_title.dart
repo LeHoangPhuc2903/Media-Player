@@ -7,11 +7,11 @@ class CustomTitle extends StatelessWidget {
   final Color color;    
 
   const CustomTitle({
-    Key? key,
+    super.key,
     required this.text,
     this.fontSize = 24.0, // Kích thước mặc định
     this.color = Colors.purple, // Màu chữ mặc định
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

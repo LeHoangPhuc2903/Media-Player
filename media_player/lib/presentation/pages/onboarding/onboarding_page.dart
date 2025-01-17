@@ -7,7 +7,7 @@ import 'package:media_player/presentation/widgets/button/custom_button.dart';
 import 'package:media_player/presentation/widgets/text/terms_and_privacy_text.dart';
 
 class OnboardingPage extends StatefulWidget {
-  const OnboardingPage({Key? key}) : super(key: key);
+  const OnboardingPage({super.key});
 
   @override
   State<OnboardingPage> createState() => _OnboardingPageState();

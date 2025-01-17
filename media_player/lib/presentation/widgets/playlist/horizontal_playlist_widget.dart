@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:media_player/domain/usecases/get_playlists_usecase.dart';
 import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
+import 'package:media_player/presentation/view_models/playlist_view_model.dart';
 
 class HorizontalPlaylistWidget extends StatelessWidget {
   final List<Map<String, String>> playlists;
 
-  const HorizontalPlaylistWidget({Key? key, required this.playlists}) : super(key: key);
+  const HorizontalPlaylistWidget({super.key, required this.playlists});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 200,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -19,6 +21,7 @@ class HorizontalPlaylistWidget extends StatelessWidget {
           return GestureDetector(
             onTap: () {
               Get.to(() => PlaylistPage(
+                PlaylistViewModel(Get.find<GetPlaylistsUseCase>()),
                 title: playlist['title']!,
                 image: playlist['image']!,
               ));

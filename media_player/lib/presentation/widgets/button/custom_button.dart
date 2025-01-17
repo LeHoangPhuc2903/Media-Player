@@ -9,14 +9,14 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
 
   const CustomButton({
-    Key? key,
+    super.key,
     required this.icon,
     required this.label,
     required this.backgroundColor,
     required this.textColor,
     this.leftPadding = 0.0,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

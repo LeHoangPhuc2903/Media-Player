@@ -5,10 +5,10 @@ class MediaInfoWidget extends StatelessWidget {
   final String artist;
 
   const MediaInfoWidget({
-    Key? key,
+    super.key,
     required this.title,
     required this.artist,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

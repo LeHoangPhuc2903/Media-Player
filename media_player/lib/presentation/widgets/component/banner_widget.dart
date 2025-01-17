@@ -6,7 +6,7 @@ import 'package:media_player/presentation/pages/banner/banner_detail_page.dart';
 class BannerWidget extends StatelessWidget {
   final List<Map<String, String>> banners;
 
-  const BannerWidget({Key? key, required this.banners}) : super(key: key);
+  const BannerWidget({super.key, required this.banners});
 
   @override
   Widget build(BuildContext context) {
