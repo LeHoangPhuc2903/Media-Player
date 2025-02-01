@@ -2,6 +2,8 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:media_player/core/services/audio_handler.dart';
+import 'package:media_player/core/services/spotify_auth_service.dart';
+import 'package:media_player/data/repositories/spotify_repository_impl.dart';
 import 'package:media_player/domain/usecases/get_playlists_usecase.dart';
 import 'package:media_player/presentation/navigation/routes.dart';
 import 'package:media_player/presentation/pages/banner/banner_detail_page.dart';
@@ -12,13 +14,15 @@ import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
 import 'package:media_player/presentation/pages/profile_page.dart';
 import 'package:media_player/presentation/pages/search_page.dart';
 import 'package:media_player/presentation/pages/splash/splash_page.dart';
+import 'package:media_player/test_api/view.dart';
+//import 'presentation/view_models/playlist_view_model.dart';
+import 'test_api/model_view.dart';
 
-import 'presentation/view_models/playlist_view_model.dart';
 
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  /*WidgetsFlutterBinding.ensureInitialized();
 
   // Khởi tạo AudioHandler
   final audioHandler = await AudioService.init(
@@ -31,7 +35,7 @@ void main() async {
   );
 
   // Inject AudioHandler
-  Get.put(audioHandler);
+  Get.put(audioHandler);*/
   runApp(MyApp());
 }
 
@@ -40,9 +44,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
-    
+    final String accessToken = 'YOUR_STATIC_ACCESS_TOKEN';
+
+    Get.put(PlaylistViewModel(accessToken));
+
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Spotify Playlist Viewer',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
+      home: PlaylistView(),
+    );
+
+
+
+    /*return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Media Player',
       initialRoute: Routes.splash,
@@ -56,6 +73,6 @@ class MyApp extends StatelessWidget {
         GetPage(name: Routes.profile, page: () => ProfilePage()),
         GetPage(name: '/banner_detail', page: () => BannerDetailPage(title: '', imageUrl: '')),
       ],
-    );
+    );*/
   }
 }
