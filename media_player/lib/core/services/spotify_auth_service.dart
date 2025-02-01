@@ -2,6 +2,8 @@ import 'package:flutter_web_auth/flutter_web_auth.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:media_player/main.dart';
+
 class SpotifyAuth {
   final String clientId = '9bd096fd1439483eb87fc4e0976564ea';
   final String clientSecret = '6b0ef04caf0649b3902ab7195ba56279';
@@ -42,6 +44,7 @@ class SpotifyAuth {
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
+      logger.d('body: ${response.body}');
       return data['access_token'];
     } else {
       print('Failed to get access token: ${response.body}');

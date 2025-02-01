@@ -40,7 +40,9 @@ dependencies:
   just_audio: ^0.9.42
   audio_service: ^0.18.16
   flutter_web_auth: ^0.6.0
+  logger: ^2.5.0
   http: ^1.2.2
+  provider: ^6.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

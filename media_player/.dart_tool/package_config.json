@@ -206,6 +206,12 @@
       "languageVersion": "3.6"
     },
     {
+      "name": "logger",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/logger-2.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
@@ -220,6 +226,12 @@
     {
       "name": "meta",
       "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.15.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "nested",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -276,6 +288,12 @@
       "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "rxdart",
@@ -410,7 +428,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-01-18T07:51:20.745919Z",
+  "generated": "2025-02-01T13:05:31.599819Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///E:/flutter",
