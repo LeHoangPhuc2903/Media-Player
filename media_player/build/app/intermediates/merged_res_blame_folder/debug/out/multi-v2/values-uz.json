@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.media_player.app-mergeDebugResources-27:/values-uz/values-uz.xml",
+            "outputFile": "com.example.media_player.app-mergeDebugResources-26:/values-uz/values-uz.xml",
             "map": [
                 {
                     "source": "C:\\Users\\lehph\\.gradle\\caches\\transforms-3\\889ae3adf7a24645889ee22f4dad2cac\\transformed\\core-1.13.1\\res\\values-uz\\values-uz.xml",
@@ -13,15 +13,15 @@
                         "endOffsets": "152,254,355,455,563,667,786,887"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,22",
+                        "startLines": "2,3,4,5,6,7,8,18",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,157,259,360,460,568,672,1922",
+                        "startOffsets": "55,157,259,360,460,568,672,1479",
                         "endColumns": "101,101,100,99,107,103,118,100",
-                        "endOffsets": "152,254,355,455,563,667,786,2018"
+                        "endOffsets": "152,254,355,455,563,667,786,1575"
                     }
                 },
                 {
-                    "source": "C:\\Users\\lehph\\.gradle\\caches\\transforms-3\\461687305acfa4c302fd8a72a94672a3\\transformed\\jetified-exoplayer-core-2.18.7\\res\\values-uz\\values-uz.xml",
+                    "source": "C:\\Users\\lehph\\.gradle\\caches\\transforms-3\\d61e896a1291a8958fc90251d79de4b7\\transformed\\jetified-media3-exoplayer-1.4.1\\res\\values-uz\\values-uz.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -30,28 +30,11 @@
                         "endOffsets": "115,181,251,315,394,462,564,658,738"
                     },
                     "to": {
-                        "startLines": "10,11,12,13,14,15,16,17,18",
+                        "startLines": "9,10,11,12,13,14,15,16,17",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "909,974,1040,1110,1174,1253,1321,1423,1517",
+                        "startOffsets": "791,856,922,992,1056,1135,1203,1305,1399",
                         "endColumns": "64,65,69,63,78,67,101,93,79",
-                        "endOffsets": "969,1035,1105,1169,1248,1316,1418,1512,1592"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lehph\\.gradle\\caches\\transforms-3\\7f6d20225ac1174a3efad96609161b97\\transformed\\browser-1.8.0\\res\\values-uz\\values-uz.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,173,282,392",
-                        "endColumns": "117,108,109,105",
-                        "endOffsets": "168,277,387,493"
-                    },
-                    "to": {
-                        "startLines": "9,19,20,21",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "791,1597,1706,1816",
-                        "endColumns": "117,108,109,105",
-                        "endOffsets": "904,1701,1811,1917"
+                        "endOffsets": "851,917,987,1051,1130,1198,1300,1394,1474"
                     }
                 }
             ]

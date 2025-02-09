@@ -1,24 +1,17 @@
-import 'media.dart';
-
 class Playlist {
-  final String id;              // ID duy nhất cho playlist
-  final String name;            // Tên playlist
-  final List<Media> mediaFiles; // Danh sách các file trong playlist
+  final String id;              
+  final String name;            
+  final List<String> audioIds;  
+  final DateTime? createdDate;
+  final DateTime? modifiedDate;
+
 
   Playlist({
     required this.id,
     required this.name,
-    required this.mediaFiles,
+    required this.audioIds,
+    this.createdDate,
+    this.modifiedDate,
   });
 
-  @override
-  String toString() {
-    return 'Playlist(name: $name, media count: ${mediaFiles.length})';
-  }
-
-  static Future<List<Playlist>> fromJson(item) async {
-    // Implement your JSON parsing logic here
-    // For now, returning an empty list as a placeholder
-    return [];
-  }
 }

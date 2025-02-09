@@ -9,7 +9,7 @@ class PlaylistPage extends StatelessWidget {
     super.key,
     required this.backgroundImage,
     required this.title,
-    required this.songs,
+    required this.songs, required String image,
   });
 
   @override

@@ -9,9 +9,9 @@
     },
     {
       "name": "audio_service",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/audio_service-0.18.16",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/audio_service-0.18.17",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.3"
     },
     {
       "name": "audio_service_platform_interface",
@@ -21,13 +21,13 @@
     },
     {
       "name": "audio_service_web",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/audio_service_web-0.1.3",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/audio_service_web-0.1.4",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.3"
     },
     {
       "name": "audio_session",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/audio_session-0.1.23",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/audio_session-0.1.25",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -122,12 +122,6 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "flutter_web_auth",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_web_auth-0.6.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.5"
-    },
-    {
       "name": "flutter_web_plugins",
       "rootUri": "file:///E:/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
@@ -147,13 +141,13 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.2",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.3.0",
       "packageUri": "lib/",
-      "languageVersion": "3.3"
+      "languageVersion": "3.4"
     },
     {
       "name": "http_parser",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.1.1",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.1.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -165,19 +159,19 @@
     },
     {
       "name": "just_audio",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/just_audio-0.9.42",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/just_audio-0.9.46",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "just_audio_platform_interface",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/just_audio_platform_interface-4.3.0",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/just_audio_platform_interface-4.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "just_audio_web",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/just_audio_web-0.4.13",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/just_audio_web-0.4.14",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -201,7 +195,7 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/lints-5.1.0",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/lints-5.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.6"
     },
@@ -278,6 +272,42 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "permission_handler",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-11.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "permission_handler_android",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-12.0.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "permission_handler_apple",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.4.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "permission_handler_html",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_html-0.1.3+5",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "permission_handler_platform_interface",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-4.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "permission_handler_windows",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_windows-0.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "platform",
       "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.6",
       "packageUri": "lib/",
@@ -339,7 +369,7 @@
     },
     {
       "name": "sqflite_darwin",
-      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_darwin-2.4.1",
+      "rootUri": "file:///C:/Users/lehph/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_darwin-2.4.1+1",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -428,7 +458,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-02-01T13:05:31.599819Z",
+  "generated": "2025-02-09T08:27:02.953954Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///E:/flutter",
