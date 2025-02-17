@@ -18,6 +18,8 @@ import 'package:media_player/presentation/pages/onboarding/onboarding_page.dart'
 import 'package:media_player/presentation/pages/player/player_page.dart';
 import 'package:media_player/presentation/pages/splash/splash_page.dart';
 
+import 'package:flutter/foundation.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,6 +42,9 @@ void main() async {
   runApp(MyApp());
 }
 
+
+
+
 var logger = Logger(
   printer: PrettyPrinter(),
 );
@@ -53,20 +58,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Media Player',
-      initialRoute: Routes.splash,
-      getPages: [
-        GetPage(name: Routes.splash, page: () => SplashPage()),
-        GetPage(name: Routes.onboarding, page: () => OnboardingPage()),
-        GetPage(name: Routes.home, page: () => HomePage()),
-        GetPage(name: Routes.player, page: () => PlayerPage(audioUrl: '')),
-        //GetPage(name: Routes.playlist, page: () => PlaylistPage(backgroundImage: '', title: '', songs: [], image: '')),
-        //GetPage(name: Routes.search, page: () => SearchPage()),
-        //GetPage(name: Routes.profile, page: () => ProfilePage()),
-        //GetPage(name: '/banner_detail', page: () => BannerDetailPage(title: '', imageUrl: '')),
-      ],
-    );
-  }
-}
+    
+          return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Media Player',
+            initialRoute: Routes.splash,
+            getPages: [
+              GetPage(name: Routes.splash, page: () => SplashPage()),
+              GetPage(name: Routes.home, page: () => HomePage()),
+              GetPage(name: Routes.player, page: () => PlayerPage(audioUrl: '')),
+            ],
+          );
+        }
+      }
+    

@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:media_player/domain/entities/audiofile.dart';
 import 'package:media_player/domain/repositories/audio_repository.dart';
+import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 
 class ScanDeviceForAudioFiles {
   final AudioRepository repository;
@@ -10,7 +11,6 @@ class ScanDeviceForAudioFiles {
 
   Future<void> call() async {
     try {
-      
       if (await _requestStoragePermission() == false) {
         print("Storage permission denied.");
         return;
@@ -18,7 +18,7 @@ class ScanDeviceForAudioFiles {
 
       List<String> searchPaths = [
         '/storage/emulated/0/Music',
-        '/storage/emulated/0/Download' 
+        '/storage/emulated/0/Download'
       ];
 
       List<Audiofile> audioFiles = [];
@@ -30,36 +30,38 @@ class ScanDeviceForAudioFiles {
           continue;
         }
 
-        List<FileSystemEntity> files = dir.listSync();
-        print("Found ${files.length} items in $path.");
-        
+        for (var file in dir.listSync()) {
+          if (file is File && file.path.endsWith('.mp3')) {
+            String correctPath = file.path.replaceAll("//", "/");
 
-        for (var file in files) {
-        if (file is File && file.path.endsWith('.mp3')) {
-        String correctPath = file.path.replaceAll("//", "/");
+            try {
+              final metadata = readMetadata(File(correctPath));
+              print("🎵 Found audio file: $correctPath");
 
-        print("🎵 Found audio file: $correctPath");
-
-    audioFiles.add(Audiofile(
-      id: file.path.hashCode.toString(),
-      title: file.uri.pathSegments.last.replaceAll('.mp3', ''),
-      artist: "Unknown",
-      duration: 0,
-      filePath: correctPath,
-    ));
-  }
-}
+              audioFiles.add(Audiofile(
+                id: file.path.hashCode.toString(),
+                title: metadata.title ?? file.uri.pathSegments.last.replaceAll('.mp3', ''),
+                artist: metadata.artist ?? "Unknown Artist",
+                //album: metadata.album ?? "Unknown Album",
+                duration: metadata.duration?.inSeconds ?? 0,
+                filePath: correctPath,
+              ));
+            } catch (e) {
+              print("⚠️ Failed to read metadata for: $correctPath");
+            }
+          }
+        }
       }
 
       if (audioFiles.isNotEmpty) {
         await repository.saveAudioFiles(audioFiles);
-        print("Found ${audioFiles.length} MP3 files.");
+        print("✅ Saved ${audioFiles.length} audio files with metadata.");
       } else {
-        print("No MP3 files found.");
+        print("⚠️ No MP3 files found.");
       }
 
     } catch (e) {
-      print("Error scanning for audio files: $e");
+      print("❌ Error scanning for audio files: $e");
     }
   }
 

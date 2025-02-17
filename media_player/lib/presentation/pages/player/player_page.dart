@@ -1,8 +1,11 @@
 import 'dart:io';
+import 'dart:typed_data';
+import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:media_player/presentation/widgets/component/square_slider_thumb.dart';
-import 'package:path_provider/path_provider.dart';
+
+
 
 
 class PlayerPage extends StatefulWidget {
@@ -19,6 +22,11 @@ class _PlayerPageState extends State<PlayerPage> {
   bool _isPlaying = false;
   Duration _currentPosition = Duration.zero;
   Duration _totalDuration = Duration.zero;
+  
+  String _title = "Unknown Title";
+  String _artist = "Unknown Artist";
+  String _album = "Unknown Album";
+  Uint8List? _albumArt;
 
   @override
   void initState() {
@@ -57,7 +65,14 @@ class _PlayerPageState extends State<PlayerPage> {
     setState(() {
       _totalDuration = _audioPlayer.duration ?? Duration.zero;
     });
-
+    final metadata = readMetadata(audioFile);
+      setState(() {
+        _title = metadata.title ?? audioFile.uri.pathSegments.last.replaceAll('.mp3', '');
+        _artist = metadata.artist ?? "Unknown Artist";
+        _album = metadata.album ?? "Unknown Album";
+        
+      });
+    print("✅ Metadata Loaded: $_title - $_artist");
     print("✅ Audio loaded successfully!");
   } catch (e) {
     print("❌ Error loading audio: $e");
@@ -128,11 +143,24 @@ void dispose() {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.music_note, size: 100, color: Colors.blue),
+            _albumArt != null
+                ? Image.memory(_albumArt!, width: 150, height: 150, fit: BoxFit.cover)
+                : Icon(Icons.music_note, size: 150, color: Colors.blue),
             SizedBox(height: 20),
             Text(
-              widget.audioUrl.split('/').last,
+              _title,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            Text(
+              _artist,
+              style: TextStyle(fontSize: 16, color: Colors.grey),
+              textAlign: TextAlign.center,
+            ),
+            Text(
+              _album,
+              style: TextStyle(fontSize: 14, color: Colors.grey),
+              textAlign: TextAlign.center,
             ),
             SizedBox(height: 20),
 
