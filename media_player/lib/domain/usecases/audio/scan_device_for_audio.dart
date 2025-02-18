@@ -35,20 +35,33 @@ class ScanDeviceForAudioFiles {
             String correctPath = file.path.replaceAll("//", "/");
 
             try {
-              final metadata = readMetadata(File(correctPath));
-              print("🎵 Found audio file: $correctPath");
+  final metadata = readMetadata(File(correctPath));
+  print("🎵 Found audio file: $correctPath");
 
-              audioFiles.add(Audiofile(
-                id: file.path.hashCode.toString(),
-                title: metadata.title ?? file.uri.pathSegments.last.replaceAll('.mp3', ''),
-                artist: metadata.artist ?? "Unknown Artist",
-                //album: metadata.album ?? "Unknown Album",
-                duration: metadata.duration?.inSeconds ?? 0,
-                filePath: correctPath,
-              ));
-            } catch (e) {
-              print("⚠️ Failed to read metadata for: $correctPath");
-            }
+  audioFiles.add(Audiofile(
+    id: file.path.hashCode.toString(),
+    title: metadata.title?.isNotEmpty == true
+        ? metadata.title!
+        : file.uri.pathSegments.last.replaceAll('.mp3', ''),
+    artist: metadata.artist?.isNotEmpty == true
+        ? metadata.artist!
+        : "Unknown Artist",
+    duration: metadata.duration?.inSeconds ?? 0,
+    filePath: correctPath,
+  ));
+} catch (e) {
+  print("$e");
+  print("⚠️ Failed to read metadata for: $correctPath. Using fallback values.");
+
+  // Ensure the file is still added even if metadata is missing
+  audioFiles.add(Audiofile(
+    id: file.path.hashCode.toString(),
+    title: file.uri.pathSegments.last.replaceAll('.mp3', ''), // Use filename as title
+    artist: "Unknown Artist",
+    duration: 0, // Assume unknown duration
+    filePath: correctPath,
+  ));
+}
           }
         }
       }

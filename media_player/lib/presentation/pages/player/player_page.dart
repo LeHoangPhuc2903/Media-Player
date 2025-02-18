@@ -65,14 +65,31 @@ class _PlayerPageState extends State<PlayerPage> {
     setState(() {
       _totalDuration = _audioPlayer.duration ?? Duration.zero;
     });
-    final metadata = readMetadata(audioFile);
+
+    try {
+      final metadata = readMetadata(audioFile);
       setState(() {
-        _title = metadata.title ?? audioFile.uri.pathSegments.last.replaceAll('.mp3', '');
-        _artist = metadata.artist ?? "Unknown Artist";
-        _album = metadata.album ?? "Unknown Album";
-        
+        _title = metadata.title?.isNotEmpty == true
+            ? metadata.title!
+            : audioFile.uri.pathSegments.last.replaceAll('.mp3', '');
+        _artist = metadata.artist?.isNotEmpty == true
+            ? metadata.artist!
+            : "Unknown Artist";
+        _album = metadata.album?.isNotEmpty == true
+            ? metadata.album!
+            : "Unknown Album";
       });
-    print("✅ Metadata Loaded: $_title - $_artist");
+      print("✅ Metadata Loaded: $_title - $_artist");
+    } catch (metaError) {
+      print("⚠️ Failed to read metadata: $metaError");
+      // Set fallback values even if metadata fails
+      setState(() {
+        _title = audioFile.uri.pathSegments.last.replaceAll('.mp3', '');
+        _artist = "Unknown Artist";
+        _album = "Unknown Album";
+      });
+    }
+
     print("✅ Audio loaded successfully!");
   } catch (e) {
     print("❌ Error loading audio: $e");
@@ -80,8 +97,9 @@ class _PlayerPageState extends State<PlayerPage> {
 }
 
 
+
   void _playPause() async {
-    if (_isPlaying) {
+    if (_isPlaying==true) {
       await _audioPlayer.pause();
     } else {
       await _audioPlayer.play();
@@ -157,11 +175,7 @@ void dispose() {
               style: TextStyle(fontSize: 16, color: Colors.grey),
               textAlign: TextAlign.center,
             ),
-            Text(
-              _album,
-              style: TextStyle(fontSize: 14, color: Colors.grey),
-              textAlign: TextAlign.center,
-            ),
+            
             SizedBox(height: 20),
 
             SliderTheme(
