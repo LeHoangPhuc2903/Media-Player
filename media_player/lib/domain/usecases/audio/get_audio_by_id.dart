@@ -7,7 +7,12 @@ class GetAudioById {
   GetAudioById(this.repository);
 
   Future<Audiofile?> call(String id) async {
-    
+  try {
     return await repository.getAudioFileById(id);
+  } catch (e) {
+    print("❌ Error fetching audio by ID $id: $e");
+    return null;
   }
+}
+
 }

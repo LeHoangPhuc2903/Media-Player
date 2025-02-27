@@ -7,6 +7,11 @@ class GetAllAudio {
   GetAllAudio(this.repository);
 
   Future<List<Audiofile>> call() async {
+  try {
     return await repository.getAllAudioFiles();
+  } catch (e) {
+    print("❌ Error getting all audio files: $e");
+    return [];
   }
+}
 }

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:typed_data';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:media_player/domain/entities/audiofile.dart';
 import 'package:media_player/domain/repositories/audio_repository.dart';
@@ -17,8 +18,10 @@ class ScanDeviceForAudioFiles {
       }
 
       List<String> searchPaths = [
-        '/storage/emulated/0/Music',
-        '/storage/emulated/0/Download'
+      '/storage/emulated/0/Music',
+      '/storage/emulated/0/Download',
+      '/storage/emulated/0/DCIM',
+      '/storage/emulated/0/Podcasts',
       ];
 
       List<Audiofile> audioFiles = [];
@@ -30,49 +33,56 @@ class ScanDeviceForAudioFiles {
           continue;
         }
 
-        for (var file in dir.listSync()) {
+        await for (var file in dir.list(recursive: false, followLinks: false)) {
           if (file is File && file.path.endsWith('.mp3')) {
             String correctPath = file.path.replaceAll("//", "/");
-
             try {
-  final metadata = readMetadata(File(correctPath));
-  print("🎵 Found audio file: $correctPath");
+              if (file.lengthSync() > 0) {
+                final metadata = readMetadata(File(correctPath));
+                  Uint8List? albumArt;
+                  bool hasImage = false;
+                  if (metadata.pictures.isNotEmpty) {
+                      albumArt = metadata.pictures.first.bytes;
+                      hasImage = true;
+                  }
+                  audioFiles.add(Audiofile(
+                  id: file.path.hashCode.toString(),
+                  title: metadata.title?.isNotEmpty == true ? metadata.title! : parseTitleFromFilename(file.uri.pathSegments.last),
+                  artist: metadata.artist?.isNotEmpty == true ? metadata.artist! : parseArtistFromFilename(file.uri.pathSegments.last),
+                  duration: metadata.duration?.inSeconds ?? 0,
+                  filePath: correctPath,
+                  albumArt: albumArt,
+                  hasImage: hasImage,
+                  albumName: metadata.album,
+                  genre: metadata.genres.isNotEmpty ? metadata.genres.first : null,
+                ));
+              } else {
+                print("⚠️ Skipping empty file or corrupt: $correctPath");
+              }
+            } catch (e) {
+              print("⚠️ Failed to read metadata for: $correctPath. Using filename as fallback.");
 
-  audioFiles.add(Audiofile(
-    id: file.path.hashCode.toString(),
-    title: metadata.title?.isNotEmpty == true
-        ? metadata.title!
-        : file.uri.pathSegments.last.replaceAll('.mp3', ''),
-    artist: metadata.artist?.isNotEmpty == true
-        ? metadata.artist!
-        : "Unknown Artist",
-    duration: metadata.duration?.inSeconds ?? 0,
-    filePath: correctPath,
-  ));
-} catch (e) {
-  print("$e");
-  print("⚠️ Failed to read metadata for: $correctPath. Using fallback values.");
-
-  // Ensure the file is still added even if metadata is missing
-  audioFiles.add(Audiofile(
-    id: file.path.hashCode.toString(),
-    title: file.uri.pathSegments.last.replaceAll('.mp3', ''), // Use filename as title
-    artist: "Unknown Artist",
-    duration: 0, // Assume unknown duration
-    filePath: correctPath,
-  ));
-}
+              audioFiles.add(Audiofile(
+                id: file.path.hashCode.toString(),
+                title: parseTitleFromFilename(file.uri.pathSegments.last),
+                artist: parseArtistFromFilename(file.uri.pathSegments.last),
+                duration: 0,
+                filePath: correctPath,
+                hasImage: false,
+              ));
+            }
           }
         }
       }
 
       if (audioFiles.isNotEmpty) {
-        await repository.saveAudioFiles(audioFiles);
-        print("✅ Saved ${audioFiles.length} audio files with metadata.");
-      } else {
-        print("⚠️ No MP3 files found.");
+        try {
+          await repository.saveAudioFiles(audioFiles);
+          print("✅ Successfully saved ${audioFiles.length} audio files.");
+        } catch (e) {
+          print("❌ Failed to save audio files to repository: $e");
+        }
       }
-
     } catch (e) {
       print("❌ Error scanning for audio files: $e");
     }
@@ -104,5 +114,32 @@ class ScanDeviceForAudioFiles {
     }
     return true;
   }
+
+  String parseTitleFromFilename(String filename) {
+  filename = filename.replaceAll(".mp3", "");
+
+  // Pattern: Artist - Title
+  final regExpBasic = RegExp(r"^(.*?)\s*-\s*(.*?)$");
+  final matchBasic = regExpBasic.firstMatch(filename);
+  if (matchBasic != null) {
+    return matchBasic.group(2) ?? filename;
+  }
+
+  // Fallback to filename if no pattern matched
+  return filename;
+}
+
+String parseArtistFromFilename(String filename) {
+  filename = filename.replaceAll(".mp3", "");
+
+  // Pattern: Artist - Title
+  final regExpBasic = RegExp(r"^(.*?)\s*-\s*(.*?)$");
+  final matchBasic = regExpBasic.firstMatch(filename);
+  if (matchBasic != null) {
+    return matchBasic.group(1) ?? "Unknown Artist";
+  }
+  // Fallback to Unknown Artist
+  return "Unknown Artist";
+}
 
 }

@@ -1,4 +1,3 @@
-import 'package:media_player/data/datasources/mock_data.dart';
 import 'package:media_player/domain/entities/playlist.dart';
 import 'package:media_player/domain/repositories/playlist_repository.dart';
 

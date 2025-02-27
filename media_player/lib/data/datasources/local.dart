@@ -1,7 +1,7 @@
 import 'package:media_player/data/models/audio_file_model.dart';
 import 'package:media_player/data/models/playlist_model.dart';
 import 'package:media_player/data/models/user_model.dart';
-import 'package:media_player/domain/entities/playlist.dart';
+
 
 abstract class LocalAudioDataSource {
   Future<List<AudioFileModel>> scanDeviceForAudioFiles();

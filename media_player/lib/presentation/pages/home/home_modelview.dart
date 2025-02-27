@@ -8,11 +8,13 @@ import 'package:media_player/domain/entities/playlist.dart';
 class HomeController extends GetxController {
   final GetAllAudio getAllAudio;
   final GetAllPlaylist getAllPlaylist;
+  final CreateNewPlaylist createNewPlaylist;
   final ScanDeviceForAudioFiles scanDeviceForAudioFiles;
 
   HomeController({
     required this.getAllAudio,
     required this.getAllPlaylist,
+    required this.createNewPlaylist,
     required this.scanDeviceForAudioFiles,
   });
 
@@ -27,10 +29,23 @@ class HomeController extends GetxController {
   }
 
   Future<void> scanAndLoadData() async {
+  try {
     isLoading.value = true; // Show loading state
     await scanDeviceForAudioFiles.call();
-    audioFiles.value = await getAllAudio.call();
-    playlists.value = await getAllPlaylist.call();
+    audioFiles.assignAll(await getAllAudio.call());
+    playlists.assignAll(await getAllPlaylist.call());
+
+    for (var playlist in playlists) {
+      playlist.audioFiles = audioFiles
+          .where((audio) => playlist.audioIds.contains(audio.id))
+          .toList();
+    }
+
+  } catch (e) {
+    print("Error loading data: $e");
+  } finally {
     isLoading.value = false; // Hide loading state
   }
+}
+
 }

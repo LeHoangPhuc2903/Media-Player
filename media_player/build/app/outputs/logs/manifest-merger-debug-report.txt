@@ -84,10 +84,6 @@ MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] C:\Users\lehph\.gradle\cac
 		INJECTED from E:\Media-Player\media_player\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:2:5-63
-uses-permission#android.permission.WAKE_LOCK
-ADDED from E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:7:5-67
-	android:name
-		ADDED from E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:7:22-65
 uses-permission#android.permission.FOREGROUND_SERVICE
 ADDED from E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:8:5-76
 	android:name

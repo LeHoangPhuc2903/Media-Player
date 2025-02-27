@@ -1,4 +1,3 @@
-import 'package:media_player/domain/entities/playlist.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:media_player/data/models/audio_file_model.dart';
@@ -16,36 +15,67 @@ class LocalDatabase {
   }
 
   Future<Database> _initDB() async {
-    final path = join(await getDatabasesPath(), 'media_player.db');
-    return openDatabase(
-      path,
-      version: 1,
-      onCreate: (db, version) async {
+  final path = join(await getDatabasesPath(), 'media_player.db');
+  return openDatabase(
+    path,
+    version: 3,
+    onCreate: (db, version) async {
+      await db.execute('''
+        CREATE TABLE audio_files (
+          id TEXT PRIMARY KEY,
+          title TEXT,
+          artist TEXT,
+          duration INTEGER,
+          filePath TEXT,
+          albumArt BLOB,
+          albumName TEXT,
+          genre TEXT,
+          hasImage INTEGER DEFAULT 0
+        )
+      ''');
+
+      await db.execute('''
+        CREATE TABLE playlists (
+          id TEXT PRIMARY KEY,
+          name TEXT
+          
+        )
+      ''');
+
+      await db.execute('''
+        CREATE TABLE playlist_audio (
+          playlist_id TEXT,
+          audio_id TEXT,
+          FOREIGN KEY (playlist_id) REFERENCES playlists(id),
+          FOREIGN KEY (audio_id) REFERENCES audio_files(id)
+        )
+      ''');
+
+      await db.execute('''
+        CREATE TABLE users (
+          id TEXT PRIMARY KEY,
+          username TEXT
+        )
+      ''');
+    },
+    onUpgrade: (db, oldVersion, newVersion) async {
+      if (oldVersion < 3) {
+        await db.execute('DROP TABLE IF EXISTS audio_files');
         await db.execute('''
-          CREATE TABLE audio_files (
-            id TEXT PRIMARY KEY,
-            title TEXT,
-            artist TEXT,
-            duration INTEGER,
-            filePath TEXT
+          CREATE TABLE playlist_audio (
+            playlist_id TEXT,
+            audio_id TEXT,
+            FOREIGN KEY (playlist_id) REFERENCES playlists(id),
+            FOREIGN KEY (audio_id) REFERENCES audio_files(id)
           )
         ''');
-        await db.execute('''
-          CREATE TABLE playlists (
-            id TEXT PRIMARY KEY,
-            name TEXT,
-            audioIds TEXT
-          )
-        ''');
-        await db.execute('''
-          CREATE TABLE users (
-            id TEXT PRIMARY KEY,
-            username TEXT
-          )
-        ''');
-      },
-    );
-  }
+        print("✅ Tables audio_files recreated.");
+      }
+    },
+  );
+}
+
+
 }
 
 class LocalAudioDataSourceImpl implements LocalAudioDataSource {

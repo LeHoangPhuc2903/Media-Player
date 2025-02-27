@@ -5,6 +5,8 @@ import 'package:media_player/data/datasources/local_impl.dart';
 import 'package:media_player/data/repositories/local_audio_repository.dart';
 import 'package:media_player/data/repositories/local_playlist_repository.dart';
 import 'package:media_player/data/repositories/local_user_repository.dart';
+import 'package:media_player/domain/entities/audiofile.dart';
+import 'package:media_player/domain/entities/playlist.dart';
 import 'package:media_player/domain/repositories/audio_repository.dart';
 import 'package:media_player/domain/repositories/playlist_repository.dart';
 import 'package:media_player/domain/repositories/user_repository.dart';
@@ -16,13 +18,14 @@ import 'package:media_player/presentation/pages/home/home_modelview.dart';
 import 'package:media_player/presentation/pages/home/home_page.dart';
 import 'package:media_player/presentation/pages/onboarding/onboarding_page.dart';
 import 'package:media_player/presentation/pages/player/player_page.dart';
+import 'package:media_player/presentation/pages/player/player_viewmodel.dart';
+import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
 import 'package:media_player/presentation/pages/splash/splash_page.dart';
-
-import 'package:flutter/foundation.dart';
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   final database = LocalDatabase();
 
   final audioRepository = LocalAudioRepository(LocalAudioDataSourceImpl(database));
@@ -36,14 +39,14 @@ void main() async {
   Get.put(HomeController(
     getAllAudio: GetAllAudio(audioRepository),
     getAllPlaylist: GetAllPlaylist(playlistRepository),
+    createNewPlaylist: CreateNewPlaylist(playlistRepository),
     scanDeviceForAudioFiles: ScanDeviceForAudioFiles(audioRepository),
   ));
 
+  Get.put(AudioController());
+
   runApp(MyApp());
 }
-
-
-
 
 var logger = Logger(
   printer: PrettyPrinter(),
@@ -58,17 +61,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-          return GetMaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: 'Media Player',
-            initialRoute: Routes.splash,
-            getPages: [
-              GetPage(name: Routes.splash, page: () => SplashPage()),
-              GetPage(name: Routes.home, page: () => HomePage()),
-              GetPage(name: Routes.player, page: () => PlayerPage(audioUrl: '')),
-            ],
-          );
-        }
-      }
-    
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Media Player',
+      initialRoute: Routes.splash,
+      getPages: [
+        GetPage(name: Routes.splash, page: () => SplashPage()),
+        GetPage(name: Routes.onboarding, page: () => OnboardingPage()),
+        GetPage(name: Routes.home, page: () => HomePage()),
+        GetPage(name: Routes.player, page: () => PlayerPage()),
+        GetPage(name: Routes.playlist, page: () => PlaylistPage(playlist: Playlist(id: "", name: "", audioIds: []))),
+
+        // Uncomment and update the following routes as needed
+        
+        // GetPage(name: Routes.search, page: () => SearchPage()),
+        // GetPage(name: Routes.profile, page: () => ProfilePage()),
+        // GetPage(name: '/banner_detail', page: () => BannerDetailPage(title: '', imageUrl: '')),
+      ],
+    );
+  }
+}

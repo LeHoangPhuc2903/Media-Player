@@ -16,9 +16,7 @@
 15-->E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:9:5-66
 15-->E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:9:22-64
 16    <!-- Storage & Media Permissions -->
-17    <uses-permission android:name="android.permission.WAKE_LOCK" />
-17-->E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:7:5-67
-17-->E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:7:22-65
+17    <!-- uses-permission android:name="android.permission.WAKE_LOCK"/ -->
 18    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Android 13+ (API 33+) -->
 18-->E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:8:5-76
 18-->E:\Media-Player\media_player\android\app\src\main\AndroidManifest.xml:8:22-74

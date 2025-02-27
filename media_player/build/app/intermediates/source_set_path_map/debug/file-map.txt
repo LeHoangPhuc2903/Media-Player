@@ -30,7 +30,7 @@ com.example.media_player.app-merged_res-28 E:\Media-Player\media_player\build\ap
 com.example.media_player.app-packaged_res-29 E:\Media-Player\media_player\build\audio_service\intermediates\packaged_res\debug
 com.example.media_player.app-packaged_res-30 E:\Media-Player\media_player\build\audio_session\intermediates\packaged_res\debug
 com.example.media_player.app-packaged_res-31 E:\Media-Player\media_player\build\just_audio\intermediates\packaged_res\debug
-com.example.media_player.app-packaged_res-32 E:\Media-Player\media_player\build\metadata_god\intermediates\packaged_res\debug
+com.example.media_player.app-packaged_res-32 E:\Media-Player\media_player\build\media_store_plus\intermediates\packaged_res\debug
 com.example.media_player.app-packaged_res-33 E:\Media-Player\media_player\build\path_provider_android\intermediates\packaged_res\debug
 com.example.media_player.app-packaged_res-34 E:\Media-Player\media_player\build\permission_handler_android\intermediates\packaged_res\debug
 com.example.media_player.app-packaged_res-35 E:\Media-Player\media_player\build\sqflite_android\intermediates\packaged_res\debug
