@@ -27,10 +27,10 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
 
     Future.delayed(const Duration(seconds: 3), () async {
     setState(() {
-        _startAnimation = false; // Hoàn tất animation
+        _startAnimation = false;
       });
       await Future.delayed(const Duration(milliseconds: 500));
-      Get.to(() => const OnboardingPage(), transition: Transition.fadeIn);
+      Get.off(() => const OnboardingPage(), transition: Transition.fadeIn);
     });
   }
 

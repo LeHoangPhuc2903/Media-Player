@@ -23,14 +23,14 @@ class CustomButton extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 80, bottom: 12),
       child: SizedBox(
-        width: double.infinity, // Lấp đầy lề phải
+        width: double.infinity,
         child: ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
             backgroundColor: backgroundColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(0),
             ),
-            padding: const EdgeInsets.symmetric(vertical: 14), // Chiều cao nút
+            padding: const EdgeInsets.symmetric(vertical: 14),
           ),
           icon: Icon(icon, color: textColor, size: 20),
           label: Text(

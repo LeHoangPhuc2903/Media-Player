@@ -8,12 +8,14 @@ class MiniPlayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      // Hide MiniPlayer when no track is playing or paused
+      
       if (audioController.currentTrack.value == null) {
         return SizedBox.shrink();
       }
-
-      return GestureDetector(
+      return AnimatedSize(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+        child: GestureDetector(
         onTap: () {
           audioController.openPlayer();
         },
@@ -43,15 +45,30 @@ class MiniPlayer extends StatelessWidget {
               ),
               IconButton(
                 icon: Icon(
+                  Icons.replay_10,
+                  color: Colors.white,),
+                onPressed: audioController.rewind,
+              ),
+              IconButton(
+                icon: Icon(
                   audioController.isPlaying.value ? Icons.pause : Icons.play_arrow,
                   color: Colors.white,
                 ),
                 onPressed: audioController.togglePlayPause,
               ),
+              IconButton(
+                icon: Icon(
+                  Icons.forward_10,
+                  color: Colors.white,),
+                onPressed: audioController.forward,
+              ),
             ],
           ),
         ),
-      );
+      ),
+    );   
     });
   }
 }
+
+

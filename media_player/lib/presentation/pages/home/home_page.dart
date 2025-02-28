@@ -124,6 +124,7 @@ class AudioListWidget extends StatelessWidget {
           leading: audio.hasImage
               ? Image.memory(audio.albumArt!, width: 50, height: 50, fit: BoxFit.cover)
               : const Icon(Icons.music_note),
+              
           title: Text(audio.title),
           subtitle: Text(audio.artist),
           onTap: () {
@@ -133,13 +134,24 @@ class AudioListWidget extends StatelessWidget {
               audioController.openPlayer();
             } else {
               HomePage.logger.w("⚠️ Invalid audio file path");
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text("Invalid audio file path"))
+              );
             }
           },
+          trailing: IconButton(
+            icon: const Icon(Icons.queue_music),
+            onPressed: () {
+              audioController.addToQueue(audio);
+            },
+          ),
         );
       },
     ));
   }
 }
+
+
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({super.key});

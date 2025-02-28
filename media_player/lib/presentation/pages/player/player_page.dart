@@ -59,34 +59,72 @@ class PlayerPage extends StatelessWidget {
                 )),
             ),
 
-            Obx(() => Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+            Obx(() => Column(
                   children: [
-                    IconButton(
-                      icon: Icon(Icons.replay_10, size: 36),
-                      onPressed: audioController.rewind,
-                    ),
-                    IconButton(
-                      icon: Icon(
-                        audioController.isPlaying.value
-                            ? Icons.pause_circle_filled
-                            : Icons.play_circle_filled,
-                        size: 50,
-                        color: Colors.blue,
-                      ),
-                      onPressed: audioController.togglePlayPause,
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.forward_10, size: 36),
-                      onPressed: audioController.forward,
-                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          icon: Icon(Icons.replay_10, size: 36),
+                          onPressed: audioController.rewind,
+                        ),
+                        IconButton(
+                          icon: Icon(
+                            audioController.isPlaying.value
+                                ? Icons.pause_circle_filled
+                                : Icons.play_circle_filled,
+                            size: 50,
+                            color: Colors.blue,
+                          ),
+                          onPressed: audioController.togglePlayPause,
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.forward_10, size: 36),
+                          onPressed: audioController.forward,
+                        ),
+                      ],
+                    ),                   
                   ],
-                )),
+                )
+              ),
+              Obx(() {
+  if (audioController.queue.isEmpty) {
+    return SizedBox.shrink();
+  }
+  return Expanded(
+    
+      child: QueueWidget(),
+    
+  );
+})
           ],
         ),
       ),
     );
   }
 }
+
+class QueueWidget extends StatelessWidget {
+  final AudioController audioController = Get.find<AudioController>();
+
+  QueueWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Obx(() => ListView.builder(
+      shrinkWrap: true,
+      physics:BouncingScrollPhysics(),
+      itemCount: audioController.queue.length,
+      itemBuilder: (context, index) {
+        final audio = audioController.queue[index];
+        return ListTile(
+          title: Text(audio.title),
+          subtitle: Text(audio.artist),
+        );
+      },
+    ));
+  }
+}
+
 
 

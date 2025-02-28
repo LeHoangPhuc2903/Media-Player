@@ -16,6 +16,7 @@ class AudioController extends GetxController {
   Rx<Duration> currentPosition = Duration.zero.obs;
   Rx<Duration> totalDuration = Duration.zero.obs;
   Rx<Uint8List?> albumArt = Rx<Uint8List?>(null);
+  RxList<Audiofile> queue = <Audiofile>[].obs;
 
   @override
   void onInit() {
@@ -51,8 +52,7 @@ class AudioController extends GetxController {
         Get.snackbar("Error", "Audio file not found!", snackPosition: SnackPosition.BOTTOM);
         return;
       }
-
-      // Extract Metadata
+      
       final metadata = await readMetadata(audioFile);
       print("🔍 Pictures found: ${metadata.pictures.length}");
       if (metadata.pictures.isNotEmpty) {
@@ -87,6 +87,11 @@ class AudioController extends GetxController {
     await audioPlayer.stop();
     currentPosition.value = Duration.zero;
     isPlaying.value = false;
+
+    if (queue.isNotEmpty) {
+    final nextTrack = queue.removeAt(0);
+    await setAudio(nextTrack);
+  }
   }
 
   // Seek
@@ -121,4 +126,17 @@ class AudioController extends GetxController {
     audioPlayer.dispose();
     super.onClose();
   }
+
+  void addToQueue(Audiofile audio) {
+  queue.add(audio);
+  Get.snackbar("Added to Queue", "${audio.title} has been added to the queue.",
+      snackPosition: SnackPosition.BOTTOM);
+}
+
+void clearQueue() {
+  queue.clear();
+  Get.snackbar("Queue Cleared", "All songs have been removed from the queue.",
+      snackPosition: SnackPosition.BOTTOM);
+}
+
 }
