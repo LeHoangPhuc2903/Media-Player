@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 import 'package:media_player/domain/entities/audiofile.dart';
 import 'package:media_player/presentation/pages/home/home_modelview.dart';
 import 'package:media_player/presentation/navigation/routes.dart';
-import 'package:media_player/presentation/pages/player/player_page.dart';
+
 import 'package:media_player/presentation/pages/player/player_viewmodel.dart';
-import 'package:media_player/presentation/widgets/component/banner_widget.dart';
+
 import 'package:media_player/presentation/widgets/component/bottom_nav_widget.dart';
 import 'package:media_player/presentation/pages/player/mini_player.dart';
 import 'package:media_player/presentation/widgets/playlist/vertical_playlist_widget.dart';

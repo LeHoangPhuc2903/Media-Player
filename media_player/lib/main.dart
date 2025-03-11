@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-import 'package:media_player/data/datasources/local_impl.dart';
-import 'package:media_player/data/repositories/local_audio_repository.dart';
-import 'package:media_player/data/repositories/local_playlist_repository.dart';
-import 'package:media_player/data/repositories/local_user_repository.dart';
+import 'package:media_player/data/datasources/local_audios_impl.dart';
+import 'package:media_player/data/repositories/audio_repository_impl.dart';
+import 'package:media_player/data/repositories/playlist_repository_impl.dart';
+import 'package:media_player/data/repositories/user_repository_impl.dart';
 import 'package:media_player/domain/entities/audiofile.dart';
 import 'package:media_player/domain/entities/playlist.dart';
 import 'package:media_player/domain/repositories/audio_repository.dart';
@@ -20,6 +20,7 @@ import 'package:media_player/presentation/pages/onboarding/onboarding_page.dart'
 import 'package:media_player/presentation/pages/player/player_page.dart';
 import 'package:media_player/presentation/pages/player/player_viewmodel.dart';
 import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
+import 'package:media_player/presentation/pages/playlist/playlist_viewmodel.dart';
 import 'package:media_player/presentation/pages/splash/splash_page.dart';
 
 
@@ -41,6 +42,16 @@ void main() async {
     getAllPlaylist: GetAllPlaylist(playlistRepository),
     createNewPlaylist: CreateNewPlaylist(playlistRepository),
     scanDeviceForAudioFiles: ScanDeviceForAudioFiles(audioRepository),
+  ));
+
+  Get.put(PlaylistViewModel(
+    createNewPlaylist: CreateNewPlaylist(playlistRepository),
+    getAllPlaylist: GetAllPlaylist(playlistRepository),
+    updatePlaylist: UpdatePlaylist(playlistRepository),
+    deletePlaylist: DeletePlaylist(playlistRepository),
+    getPlaylistById: GetPlaylistById(playlistRepository),
+    addAudio: AddAudio(playlistRepository),
+    removeAudio: RemoveAudio(playlistRepository),
   ));
 
   Get.put(AudioController());

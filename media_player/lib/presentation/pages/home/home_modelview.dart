@@ -48,4 +48,13 @@ class HomeController extends GetxController {
   }
 }
 
+Future<void> addNewPlaylist(String name) async {
+    final newPlaylist = await createNewPlaylist.call(name);
+    playlists.add(newPlaylist);
+  }
+
+  Future<void> refreshPlaylists() async {
+    playlists.assignAll(await getAllPlaylist.call());
+  }
+
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:media_player/core/utils/constants.dart';
-import 'package:media_player/presentation/navigation/routes.dart';
+
 import 'package:media_player/presentation/pages/onboarding/onboarding_page.dart';
 import 'package:media_player/presentation/widgets/text/custom_text.dart';
 
