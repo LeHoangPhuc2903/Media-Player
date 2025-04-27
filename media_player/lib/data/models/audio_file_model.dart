@@ -15,7 +15,7 @@ class AudioFileModel extends Audiofile{
 
   Map<String, dynamic> toMap() {
     return {
-      'id': id,
+      'id': id.toString(),
       'title': title,
       'artist': artist,
       'duration': duration,

@@ -5,6 +5,7 @@ import 'package:media_player/presentation/widgets/player/square_slider_thumb.dar
 
 class PlayerPage extends StatelessWidget {
   final AudioController audioController = Get.find<AudioController>();
+  
 
   @override
   Widget build(BuildContext context) {

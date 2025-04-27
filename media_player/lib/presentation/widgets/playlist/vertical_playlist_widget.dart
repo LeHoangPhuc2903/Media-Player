@@ -1,32 +1,65 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:media_player/domain/entities/playlist.dart';
+import 'package:media_player/presentation/pages/player/player_page.dart';
 import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
+import 'package:media_player/presentation/pages/home/home_modelview.dart';
+import 'package:media_player/presentation/widgets/playlist/create_playlist_widget.dart';
+import 'package:media_player/presentation/pages/player/player_viewmodel.dart';
 
 
 class VerticalPlaylistWidget extends StatelessWidget {
-  final List<Playlist> playlists; 
-  VerticalPlaylistWidget({required this.playlists});
+  final HomeController controller = Get.find<HomeController>();
+  final AudioController audioController = Get.find<AudioController>();
+  
+
+  VerticalPlaylistWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: playlists.length,
-      itemBuilder: (context, index) {
-        final playlist = playlists[index];
-        return Card(
-          margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          child: ListTile(
-            leading: const Icon(Icons.playlist_play, size: 40),
-            title: Text(playlist.name, style: TextStyle(fontWeight: FontWeight.bold)),
-            subtitle: Text('${playlist.audioFiles.length} Songs'),
-            trailing: const Icon(Icons.arrow_forward_ios),
-            onTap: () {
-              Get.to(() => PlaylistPage(playlist: playlist));
+    return Stack(
+      children: [
+        Obx(() {
+          return ListView.builder(
+            itemCount: controller.playlists.length,
+            itemBuilder: (context, index) {
+              final playlist = controller.playlists[index];
+              return ListTile(
+                title: Text(playlist.name),
+                subtitle: Text("${playlist.audioIds.length} audios"),
+                onTap: () async {
+                  Get.to(() => PlaylistPage(playlist: playlist));
+                 
+                },
+                trailing: IconButton(
+                  icon: const Icon(Icons.queue_music),
+                  onPressed: () {
+                    for (var audio in playlist.audioFiles) {
+                      audioController.addToQueue(audio);
+                    }
+                    Get.to(() => PlayerPage());
+                  },
+              ),
+              );
             },
+          );
+        }),
+        Positioned(
+          bottom: 16,
+          right: 16,
+          child: FloatingActionButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => PlaylistCreationDialog(),
+                barrierDismissible: false,);
+            },
+            child: const Icon(Icons.add),
           ),
-        );
-      },
+        ),
+      ],
     );
   }
 }
+
+
+

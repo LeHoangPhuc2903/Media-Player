@@ -6,9 +6,9 @@ class CreateNewPlaylist {
 
   CreateNewPlaylist(this._playlistRepository);
 
-  Future<Playlist> call(String name) async {
+  Future<Playlist> call(String name, {required List<String> audioIds}) async {
     
-    return await _playlistRepository.createNewPlaylist(name);
+    return await _playlistRepository.createNewPlaylist(name, audioIds: audioIds);
   }
 }
 

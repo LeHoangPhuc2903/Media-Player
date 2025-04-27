@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'dart:typed_data';
+import 'package:crypto/crypto.dart';
+import 'dart:convert';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:media_player/domain/entities/audiofile.dart';
 import 'package:media_player/domain/repositories/audio_repository.dart';
@@ -46,7 +48,7 @@ class ScanDeviceForAudioFiles {
                       hasImage = true;
                   }
                   audioFiles.add(Audiofile(
-                  id: file.path.hashCode.toString(),
+                  id: md5.convert(utf8.encode(file.path)).toString(),
                   title: metadata.title?.isNotEmpty == true ? metadata.title! : parseTitleFromFilename(file.uri.pathSegments.last),
                   artist: metadata.artist?.isNotEmpty == true ? metadata.artist! : parseArtistFromFilename(file.uri.pathSegments.last),
                   duration: metadata.duration?.inSeconds ?? 0,

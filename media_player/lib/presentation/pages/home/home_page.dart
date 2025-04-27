@@ -8,6 +8,7 @@ import 'package:media_player/presentation/pages/player/player_viewmodel.dart';
 
 import 'package:media_player/presentation/widgets/component/bottom_nav_widget.dart';
 import 'package:media_player/presentation/pages/player/mini_player.dart';
+import 'package:media_player/presentation/widgets/playlist/create_playlist_widget.dart';
 import 'package:media_player/presentation/widgets/playlist/vertical_playlist_widget.dart';
 import 'package:logger/logger.dart';
 
@@ -63,28 +64,38 @@ class HomePage extends StatelessWidget {
             children: [
               AudioListWidget(controller.audioFiles),
 
-              controller.playlists.isEmpty?
-              Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(Icons.playlist_play, size: 80, color: Colors.grey),
-                    const SizedBox(height: 10),
-                    const Text("No playlists found"),
-                    const SizedBox(height: 20),
-                    ElevatedButton.icon(
-                      onPressed: () => controller.createNewPlaylist("New Playlist"),
-                      icon: const Icon(Icons.add_box),
-                      label: const Text("Create new playlist"),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () => controller.getAllPlaylist(),
-                      icon: const Icon(Icons.refresh),
-                      label: const Text("Refresh"),
-                    ),
-                  ],
-                ),
-                ) : VerticalPlaylistWidget(playlists: controller.playlists),
+              controller.playlists.isEmpty
+    ? Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.playlist_play, size: 80, color: Colors.grey),
+            const SizedBox(height: 10),
+            const Text("No playlists found"),
+            const SizedBox(height: 20),
+
+            // Toggle Create Playlist Section
+            ElevatedButton.icon(
+              onPressed: () {
+                showDialog(
+                context: context,
+                builder: (context) => PlaylistCreationDialog(),
+                barrierDismissible: false,);
+              },
+              icon: const Icon(Icons.add_box),
+              label: const Text("Create new playlist"),
+            ),
+
+            // Refresh Button
+            ElevatedButton.icon(
+              onPressed: () => controller.getAllPlaylist(),
+              icon: const Icon(Icons.refresh),
+              label: const Text("Refresh"),
+            ),   
+          ],
+        ),
+      )
+    : VerticalPlaylistWidget(),
             ],
           );
         }),

@@ -1,4 +1,4 @@
-import 'package:media_player/data/datasources/local_audios.dart';
+import 'package:media_player/data/datasources/local_data.dart';
 import 'package:media_player/data/models/playlist_model.dart';
 import 'package:media_player/domain/entities/playlist.dart';
 import 'package:media_player/domain/repositories/playlist_repository.dart';
@@ -19,9 +19,15 @@ class LocalPlaylistRepository implements PlaylistRepository {
   }
 
   @override
-  Future<Playlist> createNewPlaylist(String name) async {
-    return await localDataSource.createNewPlaylist(name);
-  }
+Future<Playlist> createNewPlaylist(String name, {required List<String> audioIds}) async {
+  final result = await localDataSource.createNewPlaylist(name, audioIds: audioIds);
+  
+  return Playlist(
+    id: result.id,
+    name: result.name,
+    audioIds: result.audioIds,
+  );
+}
 
   @override
 Future<Playlist> updatePlaylist(Playlist playlist) async {

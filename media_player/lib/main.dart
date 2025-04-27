@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-import 'package:media_player/data/datasources/local_audios_impl.dart';
+import 'package:media_player/data/datasources/local_data_impl.dart';
 import 'package:media_player/data/repositories/audio_repository_impl.dart';
 import 'package:media_player/data/repositories/playlist_repository_impl.dart';
 import 'package:media_player/data/repositories/user_repository_impl.dart';
@@ -40,7 +40,9 @@ void main() async {
   Get.put(HomeController(
     getAllAudio: GetAllAudio(audioRepository),
     getAllPlaylist: GetAllPlaylist(playlistRepository),
+    getPlaylistById: GetPlaylistById(playlistRepository),
     createNewPlaylist: CreateNewPlaylist(playlistRepository),
+    deletePlaylist: DeletePlaylist(playlistRepository),
     scanDeviceForAudioFiles: ScanDeviceForAudioFiles(audioRepository),
   ));
 
