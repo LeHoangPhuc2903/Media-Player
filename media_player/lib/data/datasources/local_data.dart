@@ -2,19 +2,17 @@ import 'package:media_player/data/models/audio_file_model.dart';
 import 'package:media_player/data/models/playlist_model.dart';
 import 'package:media_player/data/models/user_model.dart';
 
-
 abstract class LocalAudioDataSource {
   Future<List<AudioFileModel>> scanDeviceForAudioFiles();
   Future<List<AudioFileModel>> getAllAudioFiles();
   Future<AudioFileModel?> getAudioFileById(String id);
   Future<void> saveAudioFiles(List<AudioFileModel> audioFiles);
-
 }
 
 abstract class LocalPlaylistDataSource {
   Future<List<PlaylistModel>> getAllPlaylists();
   Future<PlaylistModel?> getPlaylistById(String id);
-  Future<PlaylistModel> createNewPlaylist(String name,{List<String> audioIds = const []});
+  Future<PlaylistModel> createNewPlaylist(String name, {List<String> audioIds = const []});
   Future<PlaylistModel> updatePlaylist(PlaylistModel playlist);
   Future<void> deletePlaylist(String id);
   Future<PlaylistModel> addAudioToPlaylist(String playlistId, String audioId);
