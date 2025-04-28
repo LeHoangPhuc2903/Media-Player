@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:media_player/presentation/pages/player/player_page.dart';
 import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
 import 'package:media_player/presentation/pages/home/home_modelview.dart';
-import 'package:media_player/presentation/widgets/playlist/create_playlist_widget.dart';
 import 'package:media_player/presentation/pages/player/player_viewmodel.dart';
 
 
