@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:media_player/data/datasources/local_data_impl.dart';
+import 'package:media_player/data/repositories/local_data_impl.dart';
 import 'package:media_player/domain/usecases/audio/get_all_audio.dart';
 import 'package:media_player/domain/usecases/playlist/playlist_controller.dart';
 import 'package:media_player/domain/usecases/audio/scan_device_for_audio.dart';

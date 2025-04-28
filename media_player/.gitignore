@@ -1,16 +1,17 @@
 # Flutter related
 .build/
-.flutter-plugins
+.flutter-plugins/
 .flutter-plugins-dependencies
 .packages
 .pub-cache/
-.pub/
+.dart_tool/
+
 /android/local.properties
 **/GeneratedPluginRegistrant.java
 **/GeneratedPluginRegistrant.swift
 
 # User-specific
-.idea/
+.idea/*
 *.iml
 *.hprof
 
@@ -27,6 +28,7 @@ ios/Flutter/Generated.xcconfig
 ios/Flutter/ephemeral/
 
 # Android
+android/build.gradle/
 android/.gradle/
 android/app/debug/
 android/app/profile/

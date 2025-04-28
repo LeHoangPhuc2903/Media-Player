@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-import 'package:media_player/data/datasources/local_data_impl.dart';
+import 'package:media_player/data/repositories/local_data_impl.dart';
 import 'package:media_player/data/repositories/audio_repository_impl.dart';
 import 'package:media_player/data/repositories/playlist_repository_impl.dart';
 import 'package:media_player/data/repositories/user_repository_impl.dart';

@@ -1,0 +1,2 @@
+/Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/.cxx/Debug/6h5t5q63/x86/CMakeFiles/edit_cache.dir
+/Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/.cxx/Debug/6h5t5q63/x86/CMakeFiles/rebuild_cache.dir
