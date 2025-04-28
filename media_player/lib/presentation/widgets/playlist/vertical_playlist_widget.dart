@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:media_player/presentation/pages/player/player_page.dart';
-import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
 import 'package:media_player/presentation/pages/home/home_modelview.dart';
+import 'package:media_player/presentation/pages/player/player_page.dart';
 import 'package:media_player/presentation/pages/player/player_viewmodel.dart';
+import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
 
+import 'create_playlist_widget.dart';
 
 class VerticalPlaylistWidget extends StatelessWidget {
   final HomeController controller = Get.find<HomeController>();
   final AudioController audioController = Get.find<AudioController>();
-  
 
   VerticalPlaylistWidget({Key? key}) : super(key: key);
 
@@ -27,7 +27,6 @@ class VerticalPlaylistWidget extends StatelessWidget {
                 subtitle: Text("${playlist.audioIds.length} audios"),
                 onTap: () async {
                   Get.to(() => PlaylistPage(playlist: playlist));
-                 
                 },
                 trailing: IconButton(
                   icon: const Icon(Icons.queue_music),
@@ -37,7 +36,7 @@ class VerticalPlaylistWidget extends StatelessWidget {
                     }
                     Get.to(() => PlayerPage());
                   },
-              ),
+                ),
               );
             },
           );
@@ -50,7 +49,8 @@ class VerticalPlaylistWidget extends StatelessWidget {
               showDialog(
                 context: context,
                 builder: (context) => PlaylistCreationDialog(),
-                barrierDismissible: false,);
+                barrierDismissible: false,
+              );
             },
             child: const Icon(Icons.add),
           ),
@@ -59,6 +59,3 @@ class VerticalPlaylistWidget extends StatelessWidget {
     );
   }
 }
-
-
-

@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:media_player/domain/entities/playlist.dart';
-import 'package:media_player/domain/usecases/playlist/playlist_controller.dart';
+import 'package:media_player/domain/use_cases/playlist/playlist_controller.dart';
 
 class PlaylistViewModel extends GetxController {
   final CreateNewPlaylist createNewPlaylist;
@@ -11,7 +10,7 @@ class PlaylistViewModel extends GetxController {
   final GetPlaylistById getPlaylistById;
   final AddAudio addAudio;
   final RemoveAudio removeAudio;
-  
+
   PlaylistViewModel({
     required this.createNewPlaylist,
     required this.getAllPlaylist,

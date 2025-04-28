@@ -1,0 +1,336 @@
+-- Merging decision tree log ---
+application
+INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:23:5-76:19
+INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml
+MERGED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:22:5-29:19
+MERGED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:22:5-29:19
+MERGED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/e7373ec8c8c9bb83743be1a8cf928000/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/e7373ec8c8c9bb83743be1a8cf928000/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/5207aaa732679961e37920d79a8b34b1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/5207aaa732679961e37920d79a8b34b1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+	android:name
+		INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml
+manifest
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:1:1-86:12
+MERGED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:1:1-86:12
+INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+MERGED from [:audio_service] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/audio_service/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:just_audio] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/just_audio/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:audio_session] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/audio_session/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:media_store_plus] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/media_store_plus/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider_android] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/path_provider_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:permission_handler_android] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/permission_handler_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:sqflite_android] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/sqflite_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.media:media:1.7.0] /Users/sonpham/.gradle/caches/transforms-4/1e962c39cadf1aa8e6d5af1cd2dc8247/transformed/media-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.media3:media3-extractor:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/93e7ea2d4f5f95f6ebec86ab39437bf6/transformed/jetified-media3-extractor-1.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-container:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/590b5995c03002ff339e4f5cfabbda7c/transformed/jetified-media3-container-1.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-datasource:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/c2c9cc6f55a80b073e2d6ba716a5649b/transformed/jetified-media3-datasource-1.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-decoder:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/77e5527eb3ed9094279de239f7976c8a/transformed/jetified-media3-decoder-1.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-database:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/49f8b62bfd9de4e5c57d85eab4b099d6/transformed/jetified-media3-database-1.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-common:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/6cce56cd74af179d577ea82d3debf569/transformed/jetified-media3-common-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media3:media3-exoplayer-dash:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/71170ba526e73bb008d2156abf046d3e/transformed/jetified-media3-exoplayer-dash-1.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-exoplayer-hls:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/f5fa150f36c2d25b9d31f33ca661a7f0/transformed/jetified-media3-exoplayer-hls-1.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-exoplayer-smoothstreaming:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/36d8244cabc1f156f8ed5b6d6c4ddb6c/transformed/jetified-media3-exoplayer-smoothstreaming-1.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-exoplayer:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/ff1c8d4015f8ec24a16e0e8b58078446/transformed/jetified-media3-exoplayer-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.window:window-java:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/ccb9690f0cff7c6a3f442a16c0bed614/transformed/jetified-window-java-1.2.0/AndroidManifest.xml:17:1-21:12
+MERGED from [androidx.fragment:fragment:1.7.1] /Users/sonpham/.gradle/caches/transforms-4/7100e0e419f388bf0b582008d05d6b07/transformed/fragment-1.7.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.8.1] /Users/sonpham/.gradle/caches/transforms-4/38259046082424f4cac07235a2e3ae08/transformed/jetified-activity-1.8.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/9e362cbe28ce88bdc3138559e3edc3e9/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/de126a75ff77a9b0e1b1e403ed6b1fa0/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/18acee8158e81751b246e332b3bc05a0/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/ec0b126d6874dda48aedb3a54ed41db0/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/9ec44cbe154ce5682e0afbdba9ae8ff2/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/a832b4f886f619c28b09cc252622f004/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/930ffaf59e1183658819015e1315264c/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/sonpham/.gradle/caches/transforms-4/7f7678a2cb3ed425244acfb3e527d9c2/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7ee225fc4dc21a88a3b347d418dde90c/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/d902c16b8a72edc153dd7f93eb2f6905/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/67cef63db608fa3b464b8ce5c7876f01/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/sonpham/.gradle/caches/transforms-4/109d391a5137a5daaac10a99c4b58677/transformed/documentfile-1.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/e7373ec8c8c9bb83743be1a8cf928000/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/2947333bfddbe5943954a91af6ed159f/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/5207aaa732679961e37920d79a8b34b1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/sonpham/.gradle/caches/transforms-4/e49cc281ac0129f52b1ee63c4abed423/transformed/exifinterface-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/0340f301f490f30cdd1e88ffc3a32261/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/sonpham/.gradle/caches/transforms-4/a060f9310723f822f269c256970e1be4/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/5f06dd4f4fde3329d58f06db7607c17f/transformed/jetified-core-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/sonpham/.gradle/caches/transforms-4/ae491355e0901f2ed3734eb4eeeb187e/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/sonpham/.gradle/caches/transforms-4/43ca01c883ae2af7cd5f7060f6f1aaf8/transformed/jetified-relinker-1.4.5/AndroidManifest.xml:2:1-7:12
+	package
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:4:5-39
+		INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:3:5-51
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:2:5-63
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:8:22-74
+uses-permission#android.permission.INTERNET
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:9:5-66
+MERGED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:9:5-66
+MERGED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:9:5-66
+	android:name
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:9:22-64
+uses-permission#android.permission.READ_MEDIA_IMAGES
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:12:5-75
+	android:name
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:12:22-73
+uses-permission#android.permission.READ_MEDIA_VIDEO
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:13:5-74
+	android:name
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:13:22-72
+uses-permission#android.permission.READ_MEDIA_AUDIO
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:14:5-74
+	android:name
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:14:22-72
+uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:17:5-81
+	android:name
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:17:22-79
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:20:5-106
+	android:maxSdkVersion
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:20:78-104
+	android:name
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:20:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:21:5-107
+	android:maxSdkVersion
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:21:79-105
+	android:name
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:21:22-78
+queries
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:79:5-84:15
+intent#action:name:android.intent.action.PROCESS_TEXT+data:mimeType:text/plain
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:80:9-83:18
+action#android.intent.action.PROCESS_TEXT
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:81:13-72
+	android:name
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:81:21-70
+data
+ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:82:13-50
+	android:mimeType
+		ADDED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/main/AndroidManifest.xml:82:19-48
+uses-sdk
+INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml
+MERGED from [:audio_service] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/audio_service/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:audio_service] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/audio_service/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:just_audio] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/just_audio/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:just_audio] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/just_audio/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:audio_session] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/audio_session/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:audio_session] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/audio_session/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:media_store_plus] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/media_store_plus/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:media_store_plus] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/media_store_plus/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/path_provider_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/path_provider_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler_android] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/permission_handler_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler_android] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/permission_handler_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite_android] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/sqflite_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite_android] /Users/sonpham/Desktop/Project/Media-Player/media_player/build/sqflite_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [androidx.media:media:1.7.0] /Users/sonpham/.gradle/caches/transforms-4/1e962c39cadf1aa8e6d5af1cd2dc8247/transformed/media-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.media:media:1.7.0] /Users/sonpham/.gradle/caches/transforms-4/1e962c39cadf1aa8e6d5af1cd2dc8247/transformed/media-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.media3:media3-extractor:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/93e7ea2d4f5f95f6ebec86ab39437bf6/transformed/jetified-media3-extractor-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/93e7ea2d4f5f95f6ebec86ab39437bf6/transformed/jetified-media3-extractor-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/590b5995c03002ff339e4f5cfabbda7c/transformed/jetified-media3-container-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/590b5995c03002ff339e4f5cfabbda7c/transformed/jetified-media3-container-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/c2c9cc6f55a80b073e2d6ba716a5649b/transformed/jetified-media3-datasource-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/c2c9cc6f55a80b073e2d6ba716a5649b/transformed/jetified-media3-datasource-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/77e5527eb3ed9094279de239f7976c8a/transformed/jetified-media3-decoder-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/77e5527eb3ed9094279de239f7976c8a/transformed/jetified-media3-decoder-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/49f8b62bfd9de4e5c57d85eab4b099d6/transformed/jetified-media3-database-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/49f8b62bfd9de4e5c57d85eab4b099d6/transformed/jetified-media3-database-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/6cce56cd74af179d577ea82d3debf569/transformed/jetified-media3-common-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/6cce56cd74af179d577ea82d3debf569/transformed/jetified-media3-common-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-dash:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/71170ba526e73bb008d2156abf046d3e/transformed/jetified-media3-exoplayer-dash-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-dash:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/71170ba526e73bb008d2156abf046d3e/transformed/jetified-media3-exoplayer-dash-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-hls:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/f5fa150f36c2d25b9d31f33ca661a7f0/transformed/jetified-media3-exoplayer-hls-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-hls:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/f5fa150f36c2d25b9d31f33ca661a7f0/transformed/jetified-media3-exoplayer-hls-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-smoothstreaming:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/36d8244cabc1f156f8ed5b6d6c4ddb6c/transformed/jetified-media3-exoplayer-smoothstreaming-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-smoothstreaming:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/36d8244cabc1f156f8ed5b6d6c4ddb6c/transformed/jetified-media3-exoplayer-smoothstreaming-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/ff1c8d4015f8ec24a16e0e8b58078446/transformed/jetified-media3-exoplayer-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/ff1c8d4015f8ec24a16e0e8b58078446/transformed/jetified-media3-exoplayer-1.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window-java:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/ccb9690f0cff7c6a3f442a16c0bed614/transformed/jetified-window-java-1.2.0/AndroidManifest.xml:19:5-44
+MERGED from [androidx.window:window-java:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/ccb9690f0cff7c6a3f442a16c0bed614/transformed/jetified-window-java-1.2.0/AndroidManifest.xml:19:5-44
+MERGED from [androidx.fragment:fragment:1.7.1] /Users/sonpham/.gradle/caches/transforms-4/7100e0e419f388bf0b582008d05d6b07/transformed/fragment-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.7.1] /Users/sonpham/.gradle/caches/transforms-4/7100e0e419f388bf0b582008d05d6b07/transformed/fragment-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.8.1] /Users/sonpham/.gradle/caches/transforms-4/38259046082424f4cac07235a2e3ae08/transformed/jetified-activity-1.8.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.1] /Users/sonpham/.gradle/caches/transforms-4/38259046082424f4cac07235a2e3ae08/transformed/jetified-activity-1.8.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/9e362cbe28ce88bdc3138559e3edc3e9/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/9e362cbe28ce88bdc3138559e3edc3e9/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/de126a75ff77a9b0e1b1e403ed6b1fa0/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/de126a75ff77a9b0e1b1e403ed6b1fa0/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/18acee8158e81751b246e332b3bc05a0/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/18acee8158e81751b246e332b3bc05a0/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/ec0b126d6874dda48aedb3a54ed41db0/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/ec0b126d6874dda48aedb3a54ed41db0/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/9ec44cbe154ce5682e0afbdba9ae8ff2/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/9ec44cbe154ce5682e0afbdba9ae8ff2/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/a832b4f886f619c28b09cc252622f004/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/a832b4f886f619c28b09cc252622f004/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/930ffaf59e1183658819015e1315264c/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/930ffaf59e1183658819015e1315264c/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/sonpham/.gradle/caches/transforms-4/7f7678a2cb3ed425244acfb3e527d9c2/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/sonpham/.gradle/caches/transforms-4/7f7678a2cb3ed425244acfb3e527d9c2/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7ee225fc4dc21a88a3b347d418dde90c/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7ee225fc4dc21a88a3b347d418dde90c/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/d902c16b8a72edc153dd7f93eb2f6905/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/d902c16b8a72edc153dd7f93eb2f6905/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/67cef63db608fa3b464b8ce5c7876f01/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/67cef63db608fa3b464b8ce5c7876f01/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/sonpham/.gradle/caches/transforms-4/109d391a5137a5daaac10a99c4b58677/transformed/documentfile-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/sonpham/.gradle/caches/transforms-4/109d391a5137a5daaac10a99c4b58677/transformed/documentfile-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/e7373ec8c8c9bb83743be1a8cf928000/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/e7373ec8c8c9bb83743be1a8cf928000/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/2947333bfddbe5943954a91af6ed159f/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/2947333bfddbe5943954a91af6ed159f/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/5207aaa732679961e37920d79a8b34b1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/5207aaa732679961e37920d79a8b34b1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/sonpham/.gradle/caches/transforms-4/e49cc281ac0129f52b1ee63c4abed423/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/sonpham/.gradle/caches/transforms-4/e49cc281ac0129f52b1ee63c4abed423/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/0340f301f490f30cdd1e88ffc3a32261/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/0340f301f490f30cdd1e88ffc3a32261/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/sonpham/.gradle/caches/transforms-4/a060f9310723f822f269c256970e1be4/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/sonpham/.gradle/caches/transforms-4/a060f9310723f822f269c256970e1be4/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/5f06dd4f4fde3329d58f06db7607c17f/transformed/jetified-core-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/sonpham/.gradle/caches/transforms-4/5f06dd4f4fde3329d58f06db7607c17f/transformed/jetified-core-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/sonpham/.gradle/caches/transforms-4/ae491355e0901f2ed3734eb4eeeb187e/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/sonpham/.gradle/caches/transforms-4/ae491355e0901f2ed3734eb4eeeb187e/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/sonpham/.gradle/caches/transforms-4/43ca01c883ae2af7cd5f7060f6f1aaf8/transformed/jetified-relinker-1.4.5/AndroidManifest.xml:5:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/sonpham/.gradle/caches/transforms-4/43ca01c883ae2af7cd5f7060f6f1aaf8/transformed/jetified-relinker-1.4.5/AndroidManifest.xml:5:5-43
+	android:targetSdkVersion
+		INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/sonpham/Desktop/Project/Media-Player/media_player/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [androidx.media3:media3-common:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/6cce56cd74af179d577ea82d3debf569/transformed/jetified-media3-common-1.4.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/ff1c8d4015f8ec24a16e0e8b58078446/transformed/jetified-media3-exoplayer-1.4.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/ff1c8d4015f8ec24a16e0e8b58078446/transformed/jetified-media3-exoplayer-1.4.1/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [androidx.media3:media3-common:1.4.1] /Users/sonpham/.gradle/caches/transforms-4/6cce56cd74af179d577ea82d3debf569/transformed/jetified-media3-common-1.4.1/AndroidManifest.xml:22:22-76
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+	android:required
+		ADDED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+	android:required
+		ADDED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.window:window:1.2.0] /Users/sonpham/.gradle/caches/transforms-4/e17bcbae9dc19702ae3453ec53934949/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+permission#com.example.media_player.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+uses-permission#com.example.media_player.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/sonpham/.gradle/caches/transforms-4/4a473438ca2a0b5832eeba33fa8e4e77/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/e7373ec8c8c9bb83743be1a8cf928000/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sonpham/.gradle/caches/transforms-4/e7373ec8c8c9bb83743be1a8cf928000/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/sonpham/.gradle/caches/transforms-4/7457889f935dc8b48f041f6294a8cd5b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/sonpham/.gradle/caches/transforms-4/b7565da2c9393d2a044f0c9793647122/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92

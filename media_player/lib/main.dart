@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-import 'package:media_player/data/repositories/local_data_impl.dart';
 import 'package:media_player/data/repositories/audio_repository_impl.dart';
 import 'package:media_player/data/repositories/playlist_repository_impl.dart';
 import 'package:media_player/data/repositories/user_repository_impl.dart';
-import 'package:media_player/domain/entities/audiofile.dart';
 import 'package:media_player/domain/entities/playlist.dart';
 import 'package:media_player/domain/repositories/audio_repository.dart';
 import 'package:media_player/domain/repositories/playlist_repository.dart';
 import 'package:media_player/domain/repositories/user_repository.dart';
-import 'package:media_player/domain/usecases/audio/get_all_audio.dart';
-import 'package:media_player/domain/usecases/audio/scan_device_for_audio.dart';
-import 'package:media_player/domain/usecases/playlist/playlist_controller.dart';
+import 'package:media_player/domain/use_cases/audio/get_all_audio.dart';
+import 'package:media_player/domain/use_cases/audio/scan_device_for_audio.dart';
+import 'package:media_player/domain/use_cases/playlist/playlist_controller.dart';
 import 'package:media_player/presentation/navigation/routes.dart';
 import 'package:media_player/presentation/pages/home/home_modelview.dart';
 import 'package:media_player/presentation/pages/home/home_page.dart';
@@ -23,6 +21,7 @@ import 'package:media_player/presentation/pages/playlist/playlist_page.dart';
 import 'package:media_player/presentation/pages/playlist/playlist_viewmodel.dart';
 import 'package:media_player/presentation/pages/splash/splash_page.dart';
 
+import 'data/datasources/local_data_impl.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -86,7 +85,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: Routes.playlist, page: () => PlaylistPage(playlist: Playlist(id: "", name: "", audioIds: []))),
 
         // Uncomment and update the following routes as needed
-        
+
         // GetPage(name: Routes.search, page: () => SearchPage()),
         // GetPage(name: Routes.profile, page: () => ProfilePage()),
         // GetPage(name: '/banner_detail', page: () => BannerDetailPage(title: '', imageUrl: '')),

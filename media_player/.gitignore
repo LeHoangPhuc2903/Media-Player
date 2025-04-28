@@ -1,12 +1,9 @@
 # Flutter related
 .build/
-.flutter-plugins/
+.flutter-plugins
 .flutter-plugins-dependencies
-.packages
-.pub-cache/
-.dart_tool/
-
-/android/local.properties
+.packages/
+.dart_tool/*
 **/GeneratedPluginRegistrant.java
 **/GeneratedPluginRegistrant.swift
 
@@ -19,7 +16,7 @@
 .vscode/
 
 # iOS
-ios/Pods/
+ios/Pods/*
 ios/.symlinks/
 ios/Flutter/Flutter.framework
 ios/Flutter/Flutter.podspec
@@ -30,6 +27,8 @@ ios/Flutter/ephemeral/
 # Android
 android/build.gradle/
 android/.gradle/
+android/.idea/
+android/app/.cxx/
 android/app/debug/
 android/app/profile/
 android/app/release/
@@ -54,4 +53,4 @@ windows/flutter/ephemeral/
 *.swp
 *.swo
 *.DS_Store
-.idea/
+
